@@ -1,0 +1,110 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ ipython -i test_idict.py
+Python 3.11.6 (main, Oct  4 2023, 18:55:41) [GCC 11.4.1 20230605 (Red Hat 11.4.1-2)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.31.1 -- An enhanced Interactive Python. Type '?' for help.
+Password:
+cisco1#
+
+In [1]: net_connect
+Out[1]: <netmiko.cisco.cisco_ios.CiscoIosSSH at 0x7f47da3610d0>
+
+In [2]: net_connect.find_prompt()
+Out[2]: 'cisco1#'
+
+In [3]: net_connect.send_command("show ip int brief")
+Out[3]: 'Interface                  IP-Address      OK? Method Status                Protocol\nFastEthernet0              unassigned      YES unset  down                  down    \nFastEthernet1              unassigned      YES unset  down                  down    \nFastEthernet2              unassigned      YES unset  down                  down    \nFastEthernet3              unassigned      YES unset  down                  down    \nFastEthernet4              10.220.88.20    YES NVRAM  up                    up      \nVlan1                      unassigned      YES unset  down                  down    '
+
+In [4]: print(net_connect.send_command("show ip int brief"))
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0              unassigned      YES unset  down                  down
+FastEthernet1              unassigned      YES unset  down                  down
+FastEthernet2              unassigned      YES unset  down                  down
+FastEthernet3              unassigned      YES unset  down                  down
+FastEthernet4              10.220.88.20    YES NVRAM  up                    up
+Vlan1                      unassigned      YES unset  down                  down
+
+In [5]: print(net_connect.send_command("show ip arp"))
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.220.88.1            20   0024.c4e9.48ae  ARPA   FastEthernet4
+Internet  10.220.88.20            -   c89c.1dea.0eb6  ARPA   FastEthernet4
+Internet  10.220.88.21          197   1c6a.7aaf.576c  ARPA   FastEthernet4
+Internet  10.220.88.22          198   a093.5141.b780  ARPA   FastEthernet4
+Internet  10.220.88.23          219   502f.a8b1.6900  ARPA   FastEthernet4
+Internet  10.220.88.28          168   00aa.fc05.b513  ARPA   FastEthernet4
+Internet  10.220.88.29          143   00af.fc9a.e49e  ARPA   FastEthernet4
+Internet  10.220.88.30          108   00ab.fcc0.f97c  ARPA   FastEthernet4
+Internet  10.220.88.31          217   00ac.fc59.97f2  ARPA   FastEthernet4
+Internet  10.220.88.32          182   00aa.56ce.aa04  ARPA   FastEthernet4
+Internet  10.220.88.33           29   00aa.655d.e8c3  ARPA   FastEthernet4
+Internet  10.220.88.34           44   00aa.7867.8f6b  ARPA   FastEthernet4
+Internet  10.220.88.35           64   00aa.877d.c6e5  ARPA   FastEthernet4
+Internet  10.220.88.37          195   0001.00ff.0001  ARPA   FastEthernet4
+Internet  10.220.88.38            0   0002.00ff.0001  ARPA   FastEthernet4
+Internet  10.220.88.39            2   6464.9be8.08c8  ARPA   FastEthernet4
+Internet  10.220.88.40           68   001c.c4bf.826a  ARPA   FastEthernet4
+Internet  10.220.88.41          278   001b.7873.5634  ARPA   FastEthernet4
+Internet  10.220.88.42           16   ec38.739e.2f08  ARPA   FastEthernet4
+Internet  10.220.88.43          111   5254.abda.5495  ARPA   FastEthernet4
+
+In [6]: print(net_connect.send_command("show ip arp", expect_string=r"#"))
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.220.88.1            21   0024.c4e9.48ae  ARPA   FastEthernet4
+Internet  10.220.88.20            -   c89c.1dea.0eb6  ARPA   FastEthernet4
+Internet  10.220.88.21          198   1c6a.7aaf.576c  ARPA   FastEthernet4
+Internet  10.220.88.22          200   a093.5141.b780  ARPA   FastEthernet4
+Internet  10.220.88.23          220   502f.a8b1.6900  ARPA   FastEthernet4
+Internet  10.220.88.28          169   00aa.fc05.b513  ARPA   FastEthernet4
+Internet  10.220.88.29          144   00af.fc9a.e49e  ARPA   FastEthernet4
+Internet  10.220.88.30          110   00ab.fcc0.f97c  ARPA   FastEthernet4
+Internet  10.220.88.31          218   00ac.fc59.97f2  ARPA   FastEthernet4
+Internet  10.220.88.32          184   00aa.56ce.aa04  ARPA   FastEthernet4
+Internet  10.220.88.33           30   00aa.655d.e8c3  ARPA   FastEthernet4
+Internet  10.220.88.34           46   00aa.7867.8f6b  ARPA   FastEthernet4
+Internet  10.220.88.35           66   00aa.877d.c6e5  ARPA   FastEthernet4
+Internet  10.220.88.37          197   0001.00ff.0001  ARPA   FastEthernet4
+Internet  10.220.88.38            1   0002.00ff.0001  ARPA   FastEthernet4
+Internet  10.220.88.39            4   6464.9be8.08c8  ARPA   FastEthernet4
+Internet  10.220.88.40           69   001c.c4bf.826a  ARPA   FastEthernet4
+Internet  10.220.88.41          279   001b.7873.5634  ARPA   FastEthernet4
+Internet  10.220.88.42            0   ec38.739e.2f08  ARPA   FastEthernet4
+Internet  10.220.88.43          113   5254.abda.5495  ARPA   FastEthernet4
+
+In [7]: print(net_connect.send_command("show ip arp", expect_string=r">"))
+---------------------------------------------------------------------------
+ReadTimeout                               Traceback (most recent call last)
+<ipython-input-7-355f021ee0b7> in <module>
+----> 1 print(net_connect.send_command("show ip arp", expect_string=r">"))
+
+~/VENV/py3_venv/lib/python3.11/site-packages/netmiko/base_connection.py in wrapper_decorator(self, *args, **kwargs)
+    109     def wrapper_decorator(self: "BaseConnection", *args: Any, **kwargs: Any) -> Any:
+    110         try:
+--> 111             return_val = func(self, *args, **kwargs)
+    112         finally:
+    113             # Always flush the session_log
+
+~/VENV/py3_venv/lib/python3.11/site-packages/netmiko/utilities.py in wrapper_decorator(self, *args, **kwargs)
+    664         if self.global_cmd_verify is not None:
+    665             kwargs["cmd_verify"] = self.global_cmd_verify
+--> 666         return func(self, *args, **kwargs)
+    667
+    668     return cast(F, wrapper_decorator)
+
+~/VENV/py3_venv/lib/python3.11/site-packages/netmiko/base_connection.py in send_command(self, command_string, expect_string, read_timeout, delay_factor, max_loops, auto_find_prompt, strip_prompt, strip_command, normalize, use_textfsm, textfsm_template, use_ttp, ttp_template, use_genie, cmd_verify, raise_parsing_error)
+   1834
+   1835 """
+-> 1836             raise ReadTimeout(msg)
+   1837
+   1838         output = self._sanitize_output(
+
+ReadTimeout:
+Pattern not detected: '>' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+In [8]:
