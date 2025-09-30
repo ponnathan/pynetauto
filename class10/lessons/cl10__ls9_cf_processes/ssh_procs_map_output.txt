@@ -1,0 +1,20 @@
+(py3_venv) [ponnathan@pylab36b cl10__ls9_cf_processes]$ python ssh_procs_map.py 
+Password: 
+cisco3#
+0:00:01.036841
+cisco4#
+0:00:01.065851
+arista1#
+0:00:03.367511
+arista2#
+0:00:03.413701
+arista3#
+0:00:04.379295
+arista4#
+0:00:04.379407
+pyclass@srx2>
+0:00:05.367849
+nxos1#
+0:00:06.124443
+nxos2#
+0:00:07.932803

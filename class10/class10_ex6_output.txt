@@ -1,0 +1,53 @@
+(py3_venv) [ponnathan@pylab36b class10]$ python class10_ex6.py 
+Password: 
+
+
+
+----------------------------------------
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.220.88.1             4   0024.c4e9.48ae  ARPA   GigabitEthernet0/0/0
+Internet  10.220.88.20           94   c89c.1dea.0eb6  ARPA   GigabitEthernet0/0/0
+Internet  10.220.88.22            -   a093.5141.b780  ARPA   GigabitEthernet0/0/0
+Internet  10.220.88.23          239   502f.a8b1.6900  ARPA   GigabitEthernet0/0/0
+Internet  10.220.88.28           85   00aa.fc05.b513  ARPA   GigabitEthernet0/0/0
+Internet  10.220.88.31           56   00ac.fc59.97f2  ARPA   GigabitEthernet0/0/0
+Internet  10.220.88.37           43   0001.00ff.0001  ARPA   GigabitEthernet0/0/0
+Internet  10.220.88.38          153   0002.00ff.0001  ARPA   GigabitEthernet0/0/0
+----------------------------------------
+----------------------------------------
+Address         Age (sec)  Hardware Addr   Interface
+10.220.88.1       0:00:00  0024.c4e9.48ae  Vlan1, Ethernet1
+10.220.88.20      0:18:00  c89c.1dea.0eb6  Vlan1, not learned
+10.220.88.21      3:58:51  1c6a.7aaf.576c  Vlan1, not learned
+10.220.88.22      1:25:13  a093.5141.b780  Vlan1, not learned
+10.220.88.23      1:20:25  502f.a8b1.6900  Vlan1, not learned
+10.220.88.29      2:18:02  00af.fc9a.e49e  Vlan1, not learned
+10.220.88.30      2:37:14  00ab.fcc0.f97c  Vlan1, not learned
+10.220.88.31      2:32:26  00ac.fc59.97f2  Vlan1, not learned
+----------------------------------------
+----------------------------------------
+Address         Age (sec)  Hardware Addr   Interface
+10.220.88.1       0:00:00  0024.c4e9.48ae  Vlan1, Ethernet1
+10.220.88.20      3:33:22  c89c.1dea.0eb6  Vlan1, not learned
+10.220.88.23      1:04:32  502f.a8b1.6900  Vlan1, not learned
+10.220.88.28      2:21:21  00aa.fc05.b513  Vlan1, not learned
+10.220.88.30      2:30:57  00ab.fcc0.f97c  Vlan1, not learned
+10.220.88.31      1:14:08  00ac.fc59.97f2  Vlan1, not learned
+10.220.88.37      2:16:33  0001.00ff.0001  Vlan1, not learned
+10.220.88.38      3:28:34  0002.00ff.0001  Vlan1, not learned
+----------------------------------------
+----------------------------------------
+MAC Address       Address         Name                      Interface           Flags
+00:24:c4:e9:48:ae 10.220.88.1     10.220.88.1               vlan.0              none
+c8:9c:1d:ea:0e:b6 10.220.88.20    10.220.88.20              vlan.0              none
+50:2f:a8:b1:69:00 10.220.88.23    10.220.88.23              vlan.0              none
+Total entries: 3
+
+----------------------------------------
+
+
+
+Finished in 3.59
+
+
+

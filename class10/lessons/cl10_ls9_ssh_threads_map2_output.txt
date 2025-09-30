@@ -1,0 +1,21 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl10_ls9_ssh_threads_map2.py 
+Password: 
+{'cisco3.lasthop.io': 'cisco3#'}
+0:00:00.819824
+{'cisco4.lasthop.io': 'cisco4#'}
+0:00:00.819983
+{'arista1.lasthop.io': 'arista1#'}
+0:00:03.524980
+{'arista2.lasthop.io': 'arista2#'}
+0:00:03.525129
+{'arista3.lasthop.io': 'arista3#'}
+0:00:04.247726
+{'arista4.lasthop.io': 'arista4#'}
+0:00:04.247861
+{'srx2.lasthop.io': 'pyclass@srx2>'}
+0:00:05.514245
+{'nxos1.lasthop.io': 'nxos1#'}
+0:00:06.183073
+{'nxos2.lasthop.io': 'nxos2#'}
+0:00:08.809492
+

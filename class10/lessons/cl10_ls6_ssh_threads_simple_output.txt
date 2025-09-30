@@ -1,0 +1,7 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl10_ls6_ssh_threads_simple.py 
+Password: 
+False
+True
+Result: cisco3#
+0:00:05.001104
+

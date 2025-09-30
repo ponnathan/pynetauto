@@ -1,0 +1,20 @@
+(py3_venv) [ponnathan@pylab36b cl10__ls9_cf_processes]$ python ssh_procs_ascompleted_cm.py 
+Password: 
+Result: cisco4#
+0:00:00.789955
+Result: cisco3#
+0:00:00.988447
+Result: arista2#
+0:00:03.383590
+Result: arista1#
+0:00:03.400835
+Result: arista3#
+0:00:04.143114
+Result: arista4#
+0:00:04.333750
+Result: pyclass@srx2>
+0:00:05.433415
+Result: nxos1#
+0:00:06.590653
+Result: nxos2#
+0:00:08.736325

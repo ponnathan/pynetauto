@@ -1,0 +1,21 @@
+(py3_venv) [ponnathan@pylab36b cl10__ls9_cf_processes]$ python ssh_procs_map2.py 
+Password: 
+{'cisco3.lasthop.io': 'cisco3#'}
+0:00:01.133416
+{'cisco4.lasthop.io': 'cisco4#'}
+0:00:01.133583
+{'arista1.lasthop.io': 'arista1#'}
+0:00:03.569158
+{'arista2.lasthop.io': 'arista2#'}
+0:00:03.581048
+{'arista3.lasthop.io': 'arista3#'}
+0:00:03.581156
+{'arista4.lasthop.io': 'arista4#'}
+0:00:03.645616
+{'srx2.lasthop.io': 'pyclass@srx2>'}
+0:00:03.645744
+{'nxos1.lasthop.io': 'nxos1#'}
+0:00:03.645895
+{'nxos2.lasthop.io': 'nxos2#'}
+0:00:04.184342
+

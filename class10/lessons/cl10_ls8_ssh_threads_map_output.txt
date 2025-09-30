@@ -1,0 +1,21 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl10_ls8_ssh_threads_map.py 
+Password: 
+cisco3#
+0:00:00.828227
+cisco4#
+0:00:00.828358
+arista1#
+0:00:03.355189
+arista2#
+0:00:03.385529
+arista3#
+0:00:04.143725
+arista4#
+0:00:04.217758
+pyclass@srx2>
+0:00:05.418025
+nxos1#
+0:00:06.139487
+nxos2#
+0:00:07.867028
+

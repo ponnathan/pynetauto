@@ -1,0 +1,13 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl10_ls6_ssh_threads_wait.py 
+Password: 
+Result: cisco3#
+Result: cisco4#
+Result: arista1#
+Result: arista2#
+Result: arista3#
+Result: arista4#
+Result: pyclass@srx2>
+Result: nxos1#
+Result: nxos2#
+0:00:07.909059
+

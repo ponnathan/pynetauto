@@ -1,0 +1,17 @@
+(py3_venv) [ponnathan@pylab36b cl10__ls9_cf_processes]$ python ssh_procs_wait.py 
+Password: 
+Result: cisco3#
+Result: cisco4#
+Result: arista1#
+Result: arista2#
+Result: arista3#
+Result: arista4#
+Result: pyclass@srx2>
+Result: nxos1#
+Result: nxos2#
+0:00:08.964028
+Exception ignored in: <function _ExecutorManagerThread.__init__.<locals>.weakref_cb at 0x7fb4dd19da80>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/concurrent/futures/process.py", line 308, in weakref_cb
+AttributeError: 'NoneType' object has no attribute 'util'
+

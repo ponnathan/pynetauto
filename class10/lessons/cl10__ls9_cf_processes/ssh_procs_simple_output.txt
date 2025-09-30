@@ -1,0 +1,11 @@
+(py3_venv) [ponnathan@pylab36b cl10__ls9_cf_processes]$ python ssh_procs_simple.py 
+Password: 
+False
+True
+Result: cisco3#
+0:00:05.018899
+Exception ignored in: <function _ExecutorManagerThread.__init__.<locals>.weakref_cb at 0x7f4a71599a80>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/concurrent/futures/process.py", line 308, in weakref_cb
+AttributeError: 'NoneType' object has no attribute 'util'
+

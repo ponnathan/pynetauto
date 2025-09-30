@@ -1,0 +1,20 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl10_ls7_ssh_threads_ascompleted_cm.py 
+Password: 
+Result: cisco3#
+0:00:00.766065
+Result: cisco4#
+0:00:00.964306
+Result: arista1#
+0:00:03.489544
+Result: arista2#
+0:00:03.519312
+Result: arista3#
+0:00:04.155764
+Result: arista4#
+0:00:04.390512
+Result: pyclass@srx2>
+0:00:05.514802
+Result: nxos1#
+0:00:06.155359
+Result: nxos2#
+0:00:07.820677
