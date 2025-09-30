@@ -1,0 +1,24 @@
+(py3_venv) [ponnathan@pylab36b class2]$ python netmikoex4.py 
+Password: 
+
+################################################################################
+CFG Change: 
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+cisco3(config)#ip name-server 1.1.1.1
+cisco3(config)#ip name-server 1.0.0.1
+cisco3(config)#ip domain-lookup
+cisco3(config)#end
+cisco3#
+################################################################################
+
+Ping Successful:
+
+
+Ping Output: Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 142.250.72.238, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 8/9/12 ms
+
+
+Total Execution Time: 0:00:01.441508

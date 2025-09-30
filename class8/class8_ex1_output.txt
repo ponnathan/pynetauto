@@ -1,0 +1,67 @@
+(py3_venv) [ponnathan@pylab36b class8]$ python class8_ex1.py 
+Password: 
+
+Print device facts
+--------------------
+{'2RE': False,
+ 'HOME': '/var/home/pyclass',
+ 'RE0': {'last_reboot_reason': '0x1:power cycle/failure',
+         'mastership_state': 'master',
+         'model': 'RE-SRX110H2-VA',
+         'status': 'OK',
+         'up_time': '580 days, 3 hours, 11 minutes'},
+ 'RE1': None,
+ 'RE_hw_mi': False,
+ 'current_re': ['master',
+                'node',
+                'fwdd',
+                'member',
+                'pfem',
+                'backup',
+                're0',
+                'fpc0.pic0'],
+ 'domain': None,
+ 'fqdn': 'srx2',
+ 'hostname': 'srx2',
+ 'hostname_info': {'re0': 'srx2'},
+ 'ifd_style': 'CLASSIC',
+ 'junos_info': {'re0': {'object': junos.version_info(major=(12, 1), type=X, minor=(46, 'D', 35), build=1),
+                        'text': '12.1X46-D35.1'}},
+ 'master': 'RE0',
+ 'model': 'SRX110H2-VA',
+ 'model_info': {'re0': 'SRX110H2-VA'},
+ 'personality': 'SRX_BRANCH',
+ 're_info': {'default': {'0': {'last_reboot_reason': '0x1:power cycle/failure',
+                               'mastership_state': 'master',
+                               'model': 'RE-SRX110H2-VA',
+                               'status': 'OK'},
+                         'default': {'last_reboot_reason': '0x1:power '
+                                                           'cycle/failure',
+                                     'mastership_state': 'master',
+                                     'model': 'RE-SRX110H2-VA',
+                                     'status': 'OK'}}},
+ 're_master': {'default': '0'},
+ 'serialnumber': 'CA2418AF0190',
+ 'srx_cluster': False,
+ 'srx_cluster_id': None,
+ 'srx_cluster_redundancy_group': None,
+ 'switch_style': 'VLAN',
+ 'vc_capable': False,
+ 'vc_fabric': None,
+ 'vc_master': None,
+ 'vc_mode': None,
+ 'version': '12.1X46-D35.1',
+ 'version_RE0': '12.1X46-D35.1',
+ 'version_RE1': None,
+ 'version_info': junos.version_info(major=(12, 1), type=X, minor=(46, 'D', 35), build=1),
+ 'virtual': False,
+ 'vmhost': None,
+ 'vmhost_info': {}}
+
+
+
+Print hostname from device facts
+--------------------
+srx2
+
+

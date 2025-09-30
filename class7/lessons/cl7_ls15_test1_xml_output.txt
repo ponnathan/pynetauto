@@ -1,0 +1,12 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl7_ls15_test1_xml.py 
+Password: 
+<output>
+      <body>
+      <hostname>nxos1.lasthop.io</hostname>
+     </body>
+      <input>show hostname</input>
+      <msg>Success</msg>
+      <code>200</code>
+    </output>
+  
+

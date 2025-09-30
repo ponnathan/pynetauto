@@ -1,0 +1,221 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python textfsm.py show_ip_bgp.template show_ip_bgp.txt
+FSM Template:
+Value VALID_BEST ([*>]+)
+Value Filldown PREFIX (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/\d{1,2})
+Value NEXT_HOP (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+
+Start
+  ^\s+Network.*Path\s*$$ -> ShowIPBgp
+
+ShowIPBgp
+  ^ ${VALID_BEST}\s+${PREFIX}\s+${NEXT_HOP} -> Record
+  ^ ${VALID_BEST}\s+${NEXT_HOP} -> Record
+
+EOF
+
+
+State Transition > : ShowIPBgp
+
+Assign Var > : VALID_BEST
+
+Assign Var > : PREFIX
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.0.0/24', '208.74.64.40']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.0.0/24', '162.251.163.2']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.0.0/24', '94.142.247.3']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.0.0/24', '212.66.96.126']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.0.0/24', '91.218.184.60']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.0.0/24', '137.39.3.55']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.0.0/24', '132.198.255.253']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.0.0/24', '162.250.137.254']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.0.0/24', '208.51.134.254']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*>', '1.0.0.0/24', '202.232.0.2']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : PREFIX
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '208.74.64.40']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '209.124.176.223']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '37.139.139.0']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '12.0.1.63']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '4.69.184.193']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '195.208.112.161']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '140.192.8.16']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '198.58.198.254']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '154.11.12.212']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '202.93.8.242']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '193.0.0.56']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*>', '1.0.4.0/24', '114.31.199.1']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '134.222.87.1']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '173.205.57.234']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '198.58.198.255']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '89.149.178.10']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '203.62.252.83']
+
+Assign Var > : VALID_BEST
+
+Assign Var > : NEXT_HOP
+
+RECORD > : ['*', '1.0.4.0/24', '207.172.6.1']
+
+FSM Table:
+['VALID_BEST', 'PREFIX', 'NEXT_HOP']
+['*', '1.0.0.0/24', '208.74.64.40']
+['*', '1.0.0.0/24', '162.251.163.2']
+['*', '1.0.0.0/24', '94.142.247.3']
+['*', '1.0.0.0/24', '212.66.96.126']
+['*', '1.0.0.0/24', '91.218.184.60']
+['*', '1.0.0.0/24', '137.39.3.55']
+['*', '1.0.0.0/24', '132.198.255.253']
+['*', '1.0.0.0/24', '162.250.137.254']
+['*', '1.0.0.0/24', '208.51.134.254']
+['*>', '1.0.0.0/24', '202.232.0.2']
+['*', '1.0.4.0/24', '208.74.64.40']
+['*', '1.0.4.0/24', '209.124.176.223']
+['*', '1.0.4.0/24', '37.139.139.0']
+['*', '1.0.4.0/24', '12.0.1.63']
+['*', '1.0.4.0/24', '4.69.184.193']
+['*', '1.0.4.0/24', '195.208.112.161']
+['*', '1.0.4.0/24', '140.192.8.16']
+['*', '1.0.4.0/24', '198.58.198.254']
+['*', '1.0.4.0/24', '154.11.12.212']
+['*', '1.0.4.0/24', '202.93.8.242']
+['*', '1.0.4.0/24', '193.0.0.56']
+['*>', '1.0.4.0/24', '114.31.199.1']
+['*', '1.0.4.0/24', '134.222.87.1']
+['*', '1.0.4.0/24', '173.205.57.234']
+['*', '1.0.4.0/24', '198.58.198.255']
+['*', '1.0.4.0/24', '89.149.178.10']
+['*', '1.0.4.0/24', '203.62.252.83']
+['*', '1.0.4.0/24', '207.172.6.1']
+(py3_venv) [ponnathan@pylab36b leessons

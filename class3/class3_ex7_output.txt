@@ -1,0 +1,4 @@
+(py3_venv) [ponnathan@pylab36b class3]$ python class3_ex7.py 
+BGP Peers:
+[('10.220.88.20', '42'), ('10.220.88.32', '43')]
+

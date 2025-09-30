@@ -1,0 +1,19 @@
+---
+- some_string
+- "some string has few words"
+- null
+# Booleans
+- True
+- False
+- true
+- false
+- on
+- off
+- yes
+- no
+# Strings
+- 'yes'
+- >
+  This is a multiple string in yaml.
+  It can keep going across
+  multiple lines

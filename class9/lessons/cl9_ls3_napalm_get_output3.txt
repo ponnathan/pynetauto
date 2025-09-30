@@ -1,0 +1,13 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl9_ls3_napalm_get.py 
+Password: 
+
+
+
+>>>Test device open
+
+{'Ethernet1/1': [{'hostname': 'nxos2.lasthop.io', 'port': 'Ethernet1/1'}],
+ 'Ethernet1/2': [{'hostname': 'nxos2.lasthop.io', 'port': 'Ethernet1/2'}],
+ 'Ethernet1/3': [{'hostname': 'nxos2.lasthop.io', 'port': 'Ethernet1/3'}],
+ 'Ethernet1/4': [{'hostname': 'nxos2.lasthop.io', 'port': 'Ethernet1/4'}]}
+
+

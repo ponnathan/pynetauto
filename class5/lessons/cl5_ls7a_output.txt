@@ -1,0 +1,4 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl5_ls7a.py 
+interface GigabitEthernet0/1/0
+ switchport access vlan 400
+ switchport mode access

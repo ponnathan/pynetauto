@@ -1,0 +1,26 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ ipython -i cl8_ls7_jnpr_cfg_file.py 
+Python 3.11.6 (main, Oct  4 2023, 18:55:41) [GCC 11.4.1 20230605 (Red Hat 11.4.1-2)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.31.1 -- An enhanced Interactive Python. Type '?' for help.
+Password: 
+
+In [1]: cfg.rollback(0)
+Out[1]: True
+
+In [2]: print(cfg.diff())
+None
+
+In [3]: cfg.load(path="test_replace.conf", format="text", merge=False)
+Out[3]: <Element load-configuration-results at 0x7fc55f7fb040>
+
+In [4]: cfg.rollback(0)
+Out[4]: True
+
+In [5]: print(cfg.diff())
+None
+
+In [6]: cfg.unlock()
+Out[6]: True
+
+In [7]: quit
+

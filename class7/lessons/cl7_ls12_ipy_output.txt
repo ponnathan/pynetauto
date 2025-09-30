@@ -1,0 +1,173 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ ipython
+Python 3.11.6 (main, Oct  4 2023, 18:55:41) [GCC 11.4.1 20230605 (Red Hat 11.4.1-2)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.31.1 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: from lxml import etree
+
+In [2]: etree.parse("nxos_ns.xml")
+Out[2]: <lxml.etree._ElementTree at 0x7f99781b43c0>
+
+In [3]: etree.parse("nxos_ns.xml")
+Out[3]: <lxml.etree._ElementTree at 0x7f99784b5680>
+
+In [4]: x = etree.parse("nxos_ns.xml")
+
+In [5]: x
+Out[5]: <lxml.etree._ElementTree at 0x7f99781ec140>
+
+In [6]: my_xml = x.getroot()
+
+In [7]: my_xml
+Out[7]: <Element {urn:ietf:params:xml:ns:netconf:base:1.0}rpc-reply at 0x7f9978386f00>
+
+In [8]: my_xml.tag
+Out[8]: '{urn:ietf:params:xml:ns:netconf:base:1.0}rpc-reply'
+
+In [9]: my_xml
+Out[9]: <Element {urn:ietf:params:xml:ns:netconf:base:1.0}rpc-reply at 0x7f9978386f00>
+
+In [10]: my_xml[0]
+Out[10]: <Element {urn:ietf:params:xml:ns:netconf:base:1.0}data at 0x7f9978208240>
+
+In [11]: my_xml[0].tag
+Out[11]: '{urn:ietf:params:xml:ns:netconf:base:1.0}data'
+
+In [12]: my_xml[0][0]
+Out[12]: <Element {http://www.cisco.com/nxos:1.0:sysmgrcli}show at 0x7f99781ec240>
+
+In [13]: etree.tostring(my_xml)
+Out[13]: b'<nf:rpc-reply xmlns:nf="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="http://www.cisco.com/nxos:1.0:sysmgrcli">\n <nf:data>\n  <show>\n   <version>\n      <sys_ver_str>7.3(1)D1(1) [build 7.3(1)D1(0.10)]</sys_ver_str>\n   </version>\n  </show>\n </nf:data>\n</nf:rpc-reply>'
+
+In [14]: etree.tostring(my_xml).decode()
+Out[14]: '<nf:rpc-reply xmlns:nf="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="http://www.cisco.com/nxos:1.0:sysmgrcli">\n <nf:data>\n  <show>\n   <version>\n      <sys_ver_str>7.3(1)D1(1) [build 7.3(1)D1(0.10)]</sys_ver_str>\n   </version>\n  </show>\n </nf:data>\n</nf:rpc-reply>'
+
+In [15]: print(etree.tostring(my_xml).decode())
+<nf:rpc-reply xmlns:nf="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="http://www.cisco.com/nxos:1.0:sysmgrcli">
+ <nf:data>
+  <show>
+   <version>
+      <sys_ver_str>7.3(1)D1(1) [build 7.3(1)D1(0.10)]</sys_ver_str>
+   </version>
+  </show>
+ </nf:data>
+</nf:rpc-reply>
+
+In [16]: my_xml[0][0]
+Out[16]: <Element {http://www.cisco.com/nxos:1.0:sysmgrcli}show at 0x7f99781ec240>
+
+In [17]: my_xml[0].tag
+Out[17]: '{urn:ietf:params:xml:ns:netconf:base:1.0}data'
+
+In [18]: my_xml[0][0].tag
+Out[18]: '{http://www.cisco.com/nxos:1.0:sysmgrcli}show'
+
+In [19]: my_xml.find(".")
+Out[19]: <Element {urn:ietf:params:xml:ns:netconf:base:1.0}rpc-reply at 0x7f9978386f00>
+
+In [20]: print(etree.tostring(my_xml).decode())
+<nf:rpc-reply xmlns:nf="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="http://www.cisco.com/nxos:1.0:sysmgrcli">
+ <nf:data>
+  <show>
+   <version>
+      <sys_ver_str>7.3(1)D1(1) [build 7.3(1)D1(0.10)]</sys_ver_str>
+   </version>
+  </show>
+ </nf:data>
+</nf:rpc-reply>
+
+In [21]: my_xml.find("./data")
+
+In [22]: my_xml.find("data")
+
+In [23]: my_xml.find("{urn:ietf:params:xml:ns:netconf:base:1.0}data")
+Out[23]: <Element {urn:ietf:params:xml:ns:netconf:base:1.0}data at 0x7f9978208240>
+
+In [24]: my_xml.find("{urn:ietf:params:xml:ns:netconf:base:1.0}data/")
+Out[24]: <Element {http://www.cisco.com/nxos:1.0:sysmgrcli}show at 0x7f99781ec240>
+
+In [25]: print(etree.tostring(my_xml).decode())
+<nf:rpc-reply xmlns:nf="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="http://www.cisco.com/nxos:1.0:sysmgrcli">
+ <nf:data>
+  <show>
+   <version>
+      <sys_ver_str>7.3(1)D1(1) [build 7.3(1)D1(0.10)]</sys_ver_str>
+   </version>
+  </show>
+ </nf:data>
+</nf:rpc-reply>
+
+In [26]: my_xml.find("{*}data")
+Out[26]: <Element {urn:ietf:params:xml:ns:netconf:base:1.0}data at 0x7f9978208240>
+
+In [27]: my_xml.find("data")
+
+In [28]: my_xml.find("{*}data")
+Out[28]: <Element {urn:ietf:params:xml:ns:netconf:base:1.0}data at 0x7f9978208240>
+
+In [29]: print(etree.tostring(my_xml).decode())
+<nf:rpc-reply xmlns:nf="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="http://www.cisco.com/nxos:1.0:sysmgrcli">
+ <nf:data>
+  <show>
+   <version>
+      <sys_ver_str>7.3(1)D1(1) [build 7.3(1)D1(0.10)]</sys_ver_str>
+   </version>
+  </show>
+ </nf:data>
+</nf:rpc-reply>
+
+In [30]: my_xml.find("{*}show")
+
+In [31]: my_xml.find(".//{*}show")
+Out[31]: <Element {http://www.cisco.com/nxos:1.0:sysmgrcli}show at 0x7f99781ec240>
+
+In [32]: my_xml.find(".//{*}version")
+Out[32]: <Element {http://www.cisco.com/nxos:1.0:sysmgrcli}version at 0x7f997826e580>
+
+In [33]: ns_map = {}
+
+In [34]: ns_map['nf'] = "urn:ietf:params:xml:ns:netconf:base:1.0"
+
+In [35]: ns_map[None] = "http://www.cisco.com/nxos:1.0:sysmgrcli"
+
+In [36]: my_xml.find("data", namespaces=ns_map)
+
+In [37]: my_xml.find("nf:data", namespaces=ns_map)
+Out[37]: <Element {urn:ietf:params:xml:ns:netconf:base:1.0}data at 0x7f9978208240>
+
+In [38]: my_xml.find("nf:data/show", namespaces=ns_map)
+Out[38]: <Element {http://www.cisco.com/nxos:1.0:sysmgrcli}show at 0x7f99781ec240>
+
+In [39]: my_xml.find(".//show", namespaces=ns_map)
+Out[39]: <Element {http://www.cisco.com/nxos:1.0:sysmgrcli}show at 0x7f99781ec240>
+
+In [40]: ns_map
+Out[40]: 
+{'nf': 'urn:ietf:params:xml:ns:netconf:base:1.0',
+ None: 'http://www.cisco.com/nxos:1.0:sysmgrcli'}
+
+In [41]: print(etree.tostring(my_xml).decode())
+<nf:rpc-reply xmlns:nf="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="http://www.cisco.com/nxos:1.0:sysmgrcli">
+ <nf:data>
+  <show>
+   <version>
+      <sys_ver_str>7.3(1)D1(1) [build 7.3(1)D1(0.10)]</sys_ver_str>
+   </version>
+  </show>
+ </nf:data>
+</nf:rpc-reply>
+
+In [42]: my_xml.find(".//sys_ver_str", namespaces=ns_map)
+Out[42]: <Element {http://www.cisco.com/nxos:1.0:sysmgrcli}sys_ver_str at 0x7f9978384f40>
+
+In [43]: my_xml.find(".//sys_ver_str", namespaces=ns_map).text
+Out[43]: '7.3(1)D1(1) [build 7.3(1)D1(0.10)]'
+
+In [44]: my_xml.find(".//{*}sys_ver_str")
+Out[44]: <Element {http://www.cisco.com/nxos:1.0:sysmgrcli}sys_ver_str at 0x7f9978384f40>
+
+In [45]: my_xml.find(".//{*}sys_ver_str").text
+Out[45]: '7.3(1)D1(1) [build 7.3(1)D1(0.10)]'
+
+In [46]: quit
+

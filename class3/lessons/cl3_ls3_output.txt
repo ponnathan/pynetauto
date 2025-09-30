@@ -1,0 +1,16 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl3_ls3.py 
+Enter filename: test4.yml
+['some_string', 'some string has few words', None, True, False, True, False, True, False, True, False, 'yes']
+(py3_venv) [ponnathan@pylab36b lessons]$ 
+(py3_venv) [ponnathan@pylab36b lessons]$ vi test4.yml
+(py3_venv) [ponnathan@pylab36b lessons]$ 
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl3_ls3.py 
+Enter filename: test4.yml
+['some_string', 'some string has few words', None, True, False, True, False, True, False, True, False, 'yes', 'This is a multiple string in yaml.\nIt can keep going across\nmultiple lines\n']
+(py3_venv) [ponnathan@pylab36b lessons]$ 
+(py3_venv) [ponnathan@pylab36b lessons]$ vi test4.yml
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl3_ls3.py 
+Enter filename: test4.yml
+['some_string', 'some string has few words', None, True, False, True, False, True, False, True, False, 'yes', 'This is a multiple string in yaml. It can keep going across multiple lines\n']
+(py3_venv) [ponnathan@pylab36b lessons]$ 
+

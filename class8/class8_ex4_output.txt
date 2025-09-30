@@ -1,0 +1,16 @@
+(py3_venv) [ponnathan@pylab36b class8]$ python class8_ex4.py 
+Password: 
+
+
+
+Device srx2.lasthop.io is connected!
+
+Check for newly added routes
+--------------------
+srx2.lasthop.io has the following NEW routes: ['203.0.113.5/32', '203.0.113.200/32']
+
+Cleaning up routes that were added in this exercise.
+
+
+
+

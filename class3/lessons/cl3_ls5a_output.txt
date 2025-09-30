@@ -1,0 +1,74 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ ipython -i cl3_ls5a.py 
+Python 3.11.6 (main, Oct  4 2023, 18:55:41) [GCC 11.4.1 20230605 (Red Hat 11.4.1-2)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.31.1 -- An enhanced Interactive Python. Type '?' for help.
+Input filename: outfile.json
+{'a_bool': False,
+ 'device_name': 'rtr1',
+ 'ip_addr': '10.1.1.1',
+ 'null_value': None,
+ 'password': 'foo',
+ 'some_list': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+ 'username': 'admin'}
+
+In [1]: dir()
+Out[1]: 
+['In',
+ 'Out',
+ '_',
+ '__',
+ '___',
+ '__builtin__',
+ '__builtins__',
+ '__doc__',
+ '__loader__',
+ '__name__',
+ '__package__',
+ '__spec__',
+ '_dh',
+ '_i',
+ '_i1',
+ '_ih',
+ '_ii',
+ '_iii',
+ '_oh',
+ 'data',
+ 'exit',
+ 'f',
+ 'filename',
+ 'get_ipython',
+ 'json',
+ 'pprint',
+ 'quit']
+
+In [2]: type(data)
+Out[2]: dict
+
+In [3]: data[0]
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+<ipython-input-3-80a4aab09c73> in <module>
+----> 1 data[0]
+
+KeyError: 0
+
+In [4]: data[1]
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+<ipython-input-4-c402bf503b75> in <module>
+----> 1 data[1]
+
+KeyError: 1
+
+In [5]: data['a_bool']
+Out[5]: False
+
+In [6]: data['device_name']
+Out[6]: 'rtr1'
+
+In [7]: data['some_list']
+Out[7]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+In [8]: quit()
+(py3_venv) [ponnathan@pylab36b lessons]$ 
+

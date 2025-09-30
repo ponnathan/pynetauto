@@ -1,0 +1,10 @@
+Config staged: pending differences nxos1
+>>>>>>>> 
+<diffs here>
+>>>>>>>>
+
+Discarding candidate config for device nxos1
+Diff after discarding candidate config for device nxos1
+>>>>>>>>
+(no differences)
+>>>>>>>>

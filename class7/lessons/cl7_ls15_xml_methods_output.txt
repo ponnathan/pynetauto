@@ -1,0 +1,184 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl7_ls15_xml_methods.py 
+Password: 
+<output>
+      <body>
+      <hostname>nxos1.lasthop.io</hostname>
+     </body>
+      <input>show hostname</input>
+      <msg>Success</msg>
+      <code>200</code>
+    </output>
+    
+Hit enter to continue: 
+<output>
+      <body>
+      <header_str>Cisco Nexus Operating System (NX-OS) Software
+TAC support: http://www.cisco.com/tac
+Documents: http://www.cisco.com/en/US/products/ps9372/tsd_products_support_series_home.html
+Copyright (c) 2002-2019, Cisco Systems, Inc. All rights reserved.
+The copyrights to certain works contained herein are owned by
+other third parties and are used and distributed under license.
+Some parts of this software are covered under the GNU Public
+License. A copy of the license is available at
+http://www.gnu.org/licenses/gpl.html.
+
+Nexus 9000v is a demo version of the Nexus Operating System
+</header_str>
+      <bios_ver_str/>
+      <kickstart_ver_str>9.2(3)</kickstart_ver_str>
+      <bios_cmpl_time/>
+      <kick_file_name>bootflash:///nxos.9.2.3.bin</kick_file_name>
+      <kick_cmpl_time>2/17/2019 5:00:00</kick_cmpl_time>
+      <kick_tmstmp>02/17/2019 15:07:27</kick_tmstmp>
+      <chassis_id>Nexus9000 9000v Chassis</chassis_id>
+      <cpu_name/>
+      <memory>6096260</memory>
+      <mem_type>kB</mem_type>
+      <proc_board_id>9B2B28CMF9S</proc_board_id>
+      <host_name>nxos1</host_name>
+      <bootflash_size>3509454</bootflash_size>
+      <kern_uptm_days>119</kern_uptm_days>
+      <kern_uptm_hrs>16</kern_uptm_hrs>
+      <kern_uptm_mins>28</kern_uptm_mins>
+      <kern_uptm_secs>58</kern_uptm_secs>
+      <rr_reason>Unknown</rr_reason>
+      <rr_sys_ver/>
+      <rr_service/>
+      <manufacturer>Cisco Systems, Inc.</manufacturer>
+      <TABLE_package_list>
+       <ROW_package_list>
+        <package_id>
+</package_id>
+       </ROW_package_list>
+      </TABLE_package_list>
+     </body>
+      <input>show version</input>
+      <msg>Success</msg>
+      <code>200</code>
+    </output>
+    
+Hit enter to continue: 
+<output>
+      <body>
+        <neigh_hdr>neigh_hdr</neigh_hdr>
+        <TABLE_nbor>
+         <ROW_nbor>
+          <chassis_type>Locally Assigned</chassis_type>
+          <chassis_id>nxos2.lasthop.io</chassis_id>
+          <l_port_id>Eth1/1</l_port_id>
+          <hold_time>120</hold_time>
+          <system_capability>BR</system_capability>
+          <enabled_capability>BR</enabled_capability>
+          <port_type>Interface Name</port_type>
+          <port_id>Ethernet1/1</port_id>
+          <mgmt_addr_type>IPV4</mgmt_addr_type>
+          <mgmt_addr>10.0.2.16</mgmt_addr>
+          <mgmt_addr_ipv6_type>802</mgmt_addr_ipv6_type>
+          <mgmt_addr_ipv6>5254.0012.345e</mgmt_addr_ipv6>
+         </ROW_nbor>
+         <ROW_nbor>
+          <chassis_type>Locally Assigned</chassis_type>
+          <chassis_id>nxos2.lasthop.io</chassis_id>
+          <l_port_id>Eth1/2</l_port_id>
+          <hold_time>120</hold_time>
+          <system_capability>BR</system_capability>
+          <enabled_capability>BR</enabled_capability>
+          <port_type>Interface Name</port_type>
+          <port_id>Ethernet1/2</port_id>
+          <mgmt_addr_type>IPV4</mgmt_addr_type>
+          <mgmt_addr>10.0.2.16</mgmt_addr>
+          <mgmt_addr_ipv6_type>802</mgmt_addr_ipv6_type>
+          <mgmt_addr_ipv6>5254.0012.345f</mgmt_addr_ipv6>
+         </ROW_nbor>
+         <ROW_nbor>
+          <chassis_type>Locally Assigned</chassis_type>
+          <chassis_id>nxos2.lasthop.io</chassis_id>
+          <l_port_id>Eth1/3</l_port_id>
+          <hold_time>120</hold_time>
+          <system_capability>BR</system_capability>
+          <enabled_capability>BR</enabled_capability>
+          <port_type>Interface Name</port_type>
+          <port_id>Ethernet1/3</port_id>
+          <mgmt_addr_type>IPV4</mgmt_addr_type>
+          <mgmt_addr>10.0.2.16</mgmt_addr>
+          <mgmt_addr_ipv6_type>802</mgmt_addr_ipv6_type>
+          <mgmt_addr_ipv6>5254.0012.3460</mgmt_addr_ipv6>
+         </ROW_nbor>
+         <ROW_nbor>
+          <chassis_type>Locally Assigned</chassis_type>
+          <chassis_id>nxos2.lasthop.io</chassis_id>
+          <l_port_id>Eth1/4</l_port_id>
+          <hold_time>120</hold_time>
+          <system_capability>BR</system_capability>
+          <enabled_capability>BR</enabled_capability>
+          <port_type>Interface Name</port_type>
+          <port_id>Ethernet1/4</port_id>
+          <mgmt_addr_type>IPV4</mgmt_addr_type>
+          <mgmt_addr>10.0.2.16</mgmt_addr>
+          <mgmt_addr_ipv6_type>802</mgmt_addr_ipv6_type>
+          <mgmt_addr_ipv6>5254.0012.3461</mgmt_addr_ipv6>
+         </ROW_nbor>
+        </TABLE_nbor>
+        <neigh_count>4</neigh_count>
+       </body>
+      <input>show lldp neighbors</input>
+      <msg>Success</msg>
+      <code>200</code>
+    </output>
+  
+Hit enter to continue: 
+<output>
+      <body>Cisco Nexus Operating System (NX-OS) Software
+TAC support: http://www.cisco.com/tac
+Documents: http://www.cisco.com/en/US/products/ps9372/tsd_products_support_series_home.html
+Copyright (c) 2002-2019, Cisco Systems, Inc. All rights reserved.
+The copyrights to certain works contained herein are owned by
+other third parties and are used and distributed under license.
+Some parts of this software are covered under the GNU Public
+License. A copy of the license is available at
+http://www.gnu.org/licenses/gpl.html.
+
+Nexus 9000v is a demo version of the Nexus Operating System
+
+Software
+  BIOS: version 
+ NXOS: version 9.2(3)
+  BIOS compile time:  
+  NXOS image file is: bootflash:///nxos.9.2.3.bin
+  NXOS compile time:  2/17/2019 5:00:00 [02/17/2019 15:07:27]
+
+
+Hardware
+  cisco Nexus9000 9000v Chassis 
+   with 6096260 kB of memory.
+  Processor Board ID 9B2B28CMF9S
+
+  Device name: nxos1
+  bootflash:    3509454 kB
+Kernel uptime is 119 day(s), 16 hour(s), 29 minute(s), 16 second(s)
+
+Last reset 
+  Reason: Unknown
+  System version: 
+  Service: 
+
+plugin
+  Core Plugin, Ethernet Plugin
+
+Active Package(s):
+        
+</body>
+      <input>show version</input>
+      <msg>Success</msg>
+      <code>200</code>
+    </output>
+  
+<output>
+      <body/>
+      <code>200</code>
+      <msg>Success</msg>
+    </output>
+  
+True
+(py3_venv) [ponnathan@pylab36b lessons]$ 
+

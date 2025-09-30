@@ -1,0 +1,18 @@
+(py3_venv) [ponnathan@pylab36b class3]$ python class3_ex2a.py 
+
+[{'device_name': 'cisco1',
+  'host': 'cisco1.lasthop.io',
+  'password': 'cisco123',
+  'username': 'admin'},
+ {'device_name': 'cisco2',
+  'host': 'cisco2.lasthop.io',
+  'password': 'cisco123',
+  'username': 'admin'},
+ {'device_name': 'arista1',
+  'host': 'arista1.lasthop.io',
+  'password': 'cisco123',
+  'username': 'admin'},
+ {'device_name': 'arista2',
+  'host': 'arista2.lasthop.io',
+  'password': 'cisco123',
+  'username': 'admin'}]

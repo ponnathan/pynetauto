@@ -1,0 +1,18 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl6_ls3_eapi_config.py 
+Password: 
+
+{'id': '1', 'jsonrpc': '2.0', 'result': [{}, {}, {}, {}, {}]}
+
+(py3_venv) [ponnathan@pylab36b lessons]$ vi cl6_ls3_eapi_config.py
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl6_ls3_eapi_config.py 
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_config.py(16)<module>()
+     15     ipdb.set_trace()
+---> 16     http_headers = {"Content-Type": "application/json-rpc;"}
+     17     host = "arista8.lasthop.io"
+
+ipdb> c
+Password: 
+
+{'id': '1', 'jsonrpc': '2.0', 'result': [{}, {}, {}, {}, {}]}
+
+

@@ -1,0 +1,81 @@
+(py3_venv) [ponnathan@pylab36b class4]$ python textfsm.py show_inter_status_ex2.template show_inter_status.txt 
+FSM Template:
+Value PORT_NAME (\S+)
+Value STATUS (\S+)
+Value VLAN (\d+)
+Value DUPLEX (\S+)
+Value SPEED (\S+)
+Value PORT_TYPE (\S+)
+
+Start
+  ^\s*Port\s+Name\s+Status.* -> Interfaces
+
+Interfaces
+  ^\s*${PORT_NAME}\s+${STATUS}\s+${VLAN}\s+${DUPLEX}\s+${SPEED}\s+${PORT_TYPE}$$ -> Record
+
+
+State Transition > : Interfaces
+
+Assign Var > : PORT_NAME
+
+Assign Var > : STATUS
+
+Assign Var > : VLAN
+
+Assign Var > : DUPLEX
+
+Assign Var > : SPEED
+
+Assign Var > : PORT_TYPE
+
+RECORD > : ['Gi0/1/0', 'notconnect', '1', 'auto', 'auto', '10/100/1000BaseTX']
+
+Assign Var > : PORT_NAME
+
+Assign Var > : STATUS
+
+Assign Var > : VLAN
+
+Assign Var > : DUPLEX
+
+Assign Var > : SPEED
+
+Assign Var > : PORT_TYPE
+
+RECORD > : ['Gi0/1/1', 'notconnect', '1', 'auto', 'auto', '10/100/1000BaseTX']
+
+Assign Var > : PORT_NAME
+
+Assign Var > : STATUS
+
+Assign Var > : VLAN
+
+Assign Var > : DUPLEX
+
+Assign Var > : SPEED
+
+Assign Var > : PORT_TYPE
+
+RECORD > : ['Gi0/1/2', 'notconnect', '1', 'auto', 'auto', '10/100/1000BaseTX']
+
+Assign Var > : PORT_NAME
+
+Assign Var > : STATUS
+
+Assign Var > : VLAN
+
+Assign Var > : DUPLEX
+
+Assign Var > : SPEED
+
+Assign Var > : PORT_TYPE
+
+RECORD > : ['Gi0/1/3', 'notconnect', '1', 'auto', 'auto', '10/100/1000BaseTX']
+
+FSM Table:
+['PORT_NAME', 'STATUS', 'VLAN', 'DUPLEX', 'SPEED', 'PORT_TYPE']
+['Gi0/1/0', 'notconnect', '1', 'auto', 'auto', '10/100/1000BaseTX']
+['Gi0/1/1', 'notconnect', '1', 'auto', 'auto', '10/100/1000BaseTX']
+['Gi0/1/2', 'notconnect', '1', 'auto', 'auto', '10/100/1000BaseTX']
+['Gi0/1/3', 'notconnect', '1', 'auto', 'auto', '10/100/1000BaseTX']
+

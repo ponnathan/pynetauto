@@ -1,0 +1,88 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ ipython
+Python 3.11.6 (main, Oct  4 2023, 18:55:41) [GCC 11.4.1 20230605 (Red Hat 11.4.1-2)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.31.1 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: from jnpr.junos import Device
+   ...: from jnpr.junos.utils.config import Config
+   ...: from getpass import getpass
+   ...: 
+   ...: password = os.getenv("PYNET_PASSWORD") if os.getenv("PYNET_PASSWORD") else getpass()
+   ...: 
+   ...: a_device = Device(host="srx2.lasthop.io", user="pyclass", password=password)
+   ...: a_device.open()
+   ...: a_device.timeout = 60
+   ...: 
+   ...: cfg = Config(a_device)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-1-a7ce5a4ba3c2> in <module>
+      3 from getpass import getpass
+      4 
+----> 5 password = os.getenv("PYNET_PASSWORD") if os.getenv("PYNET_PASSWORD") else getpass()
+      6 
+      7 a_device = Device(host="srx2.lasthop.io", user="pyclass", password=password)
+
+NameError: name 'os' is not defined
+
+In [2]: import os
+   ...: from jnpr.junos import Device
+   ...: from jnpr.junos.utils.config import Config
+   ...: from getpass import getpass
+   ...: 
+   ...: password = os.getenv("PYNET_PASSWORD") if os.getenv("PYNET_PASSWORD") else getpass()
+   ...: 
+   ...: a_device = Device(host="srx2.lasthop.io", user="pyclass", password=password)
+   ...: a_device.open()
+   ...: a_device.timeout = 60
+   ...: 
+   ...: cfg = Config(a_device)
+Password: 
+
+In [3]: cfg
+Out[3]: jnpr.junos.utils.Config(srx2.lasthop.io)
+
+In [4]: type(cfg)
+Out[4]: jnpr.junos.utils.config.Config
+
+In [5]: cfg.lock()
+Out[5]: True
+
+In [6]: cfg.load("set system host-name test123", format="set", merge=True)
+Out[6]: <Element load-configuration-results at 0x7fc5ae208280>
+
+In [7]: cfg.rollback(0)
+Out[7]: True
+
+In [8]: cfg.load("set system host-name test123", format="set", merge=True)
+Out[8]: <Element load-configuration-results at 0x7fc5b4c51580>
+
+In [9]: print(cfg.diff())
+
+[edit system]
+-  host-name srx2;
++  host-name test123;
+
+
+In [10]: cfg.commit()
+Out[10]: True
+
+In [11]: cfg.load("set system host-name srx2", format="set", merge=True)
+Out[11]: <Element load-configuration-results at 0x7fc5b4b0e300>
+
+In [12]: print(cfg.diff())
+
+[edit system]
+-  host-name test123;
++  host-name srx2;
+
+
+In [13]: cfg.commit(comment="changing host name")
+Out[13]: True
+
+In [14]: cfg.unlock()
+Out[14]: True
+
+In [15]: quit()
+(py3_venv) [ponnathan@pylab36b lessons]$ 
+

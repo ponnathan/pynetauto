@@ -1,0 +1,104 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ ipython
+Python 3.11.6 (main, Oct  4 2023, 18:55:41) [GCC 11.4.1 20230605 (Red Hat 11.4.1-2)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.31.1 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: import xmltodict
+
+In [2]: f = open("show_ver3.xml")
+
+In [3]: xmldata = f.read().strip()
+
+In [4]: mx_xml = xmltodict.parse(xmldata)
+
+In [5]: my_xml
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-5-3bc32d0644fc> in <module>
+----> 1 my_xml
+
+NameError: name 'my_xml' is not defined
+
+In [6]: my_xml
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-6-3bc32d0644fc> in <module>
+----> 1 my_xml
+
+NameError: name 'my_xml' is not defined
+
+In [7]: my_xml = xmltodict.parse(xmldata)
+
+In [8]: my_xml
+Out[8]: 
+OrderedDict([('software-information',
+              OrderedDict([('host-name', 'pynet-jnpr-srx1'),
+                           ('product-model', 'srx100h2'),
+                           ('product-name',
+                            [OrderedDict([('@foo', 'bar'),
+                                          ('#text', 'srx100h2')]),
+                             OrderedDict([('@foo', 'bar'),
+                                          ('#text', 'srx100h3')])]),
+                           ('jsr', None),
+                           ('package-information',
+                            OrderedDict([('name', 'junos'),
+                                         ('comment',
+                                          'JUNOS Software Release [12.1X44-D35.5]')]))]))])
+
+In [9]: my_xml.keys()
+Out[9]: odict_keys(['software-information'])
+
+In [10]: my_xml['software-information']
+Out[10]: 
+OrderedDict([('host-name', 'pynet-jnpr-srx1'),
+             ('product-model', 'srx100h2'),
+             ('product-name',
+              [OrderedDict([('@foo', 'bar'), ('#text', 'srx100h2')]),
+               OrderedDict([('@foo', 'bar'), ('#text', 'srx100h3')])]),
+             ('jsr', None),
+             ('package-information',
+              OrderedDict([('name', 'junos'),
+                           ('comment',
+                            'JUNOS Software Release [12.1X44-D35.5]')]))])
+
+In [11]: my_xml['software-information']['product-name']
+Out[11]: 
+[OrderedDict([('@foo', 'bar'), ('#text', 'srx100h2')]),
+ OrderedDict([('@foo', 'bar'), ('#text', 'srx100h3')])]
+
+In [12]: type(my_xml['software-information']['product-name'])
+Out[12]: list
+
+In [13]: my_xml['software-information']['product-name'][0]
+Out[13]: OrderedDict([('@foo', 'bar'), ('#text', 'srx100h2')])
+
+In [14]: my_xml['software-information']['product-name'][1]
+Out[14]: OrderedDict([('@foo', 'bar'), ('#text', 'srx100h3')])
+
+In [15]: my_xml['software-information']['product-name'][0].keys()
+Out[15]: odict_keys(['@foo', '#text'])
+
+In [16]: print(xmldata)
+<software-information>
+        <host-name>pynet-jnpr-srx1</host-name>
+        <product-model>srx100h2</product-model>
+        <product-name foo="bar">srx100h2</product-name>
+        <product-name foo="bar">srx100h3</product-name>
+        <jsr/>
+        <package-information>
+            <name>junos</name>
+            <comment>JUNOS Software Release [12.1X44-D35.5]</comment>
+        </package-information>
+    </software-information>
+
+In [17]: my_xml['software-information']['product-name'][0].keys()
+Out[17]: odict_keys(['@foo', '#text'])
+
+In [18]: my_xml['software-information']['product-name'][0]['@foo']
+Out[18]: 'bar'
+
+In [19]: my_xml['software-information']['product-name'][0]['#text']
+Out[19]: 'srx100h2'
+
+In [20]: quit
+

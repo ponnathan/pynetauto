@@ -1,0 +1,28 @@
+(py3_venv) [ponnathan@pylab36b class7]$ python class7_ex4.py 
+
+
+
+Find tag of the first zones-security element
+--------------------
+zones-security
+
+Find the tag of all the child elements of the first security-zone
+--------------------
+zones-security-zonename
+zones-security-send-reset
+zones-security-policy-configurable
+zones-security-interfaces-bound
+zones-security-interfaces
+
+
+
+Use the find() method to find the first 'zones-security-zonename' element
+--------------------
+trust
+trust
+untrust
+junos-host
+
+
+
+

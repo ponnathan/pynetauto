@@ -1,0 +1,7 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl5_ls15b.py 
+
+header info
+
+This was pulled in dynamically based on the variable name!
+
+footer info

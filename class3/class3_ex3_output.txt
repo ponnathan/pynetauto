@@ -1,0 +1,6 @@
+(py3_venv) [ponnathan@pylab36b class3]$ python class3_ex3.py 
+IPv4 Addresses with Prefixes:
+['1.1.1.1/24', '2.2.2.2/27', '3.3.3.3/25', '4.4.4.4/16']
+
+IPv6 Addresses with Prefixes:
+['fe80::2ec2:60ff:fe4f:feb2/16', '2001:db8::1/16', 'fe80::2ec2:60ff:fe4f:feb2/16', '2001:11:2233::a1/16', '2001:cc11:22bb:0:2ec2:60ff:fe4f:feb2/16']

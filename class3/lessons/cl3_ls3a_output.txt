@@ -1,0 +1,25 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ cat outfile.yml 
+a_boot: false
+device_name: rtr1
+ip_addr: 10.1.1.1
+null_value: null
+password: foo
+some_list:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+username: admin
+(py3_venv) [ponnathan@pylab36b lessons]$ vi cl3_ls3a.py 
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl3_ls3a.py 
+(py3_venv) [ponnathan@pylab36b lessons]$ cat outfile.yml 
+{a_boot: false, device_name: rtr1, ip_addr: 10.1.1.1, null_value: null, password: foo,
+  some_list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], username: admin}
+(py3_venv) [ponnathan@pylab36b lessons]$ 
+

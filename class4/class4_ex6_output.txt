@@ -1,0 +1,171 @@
+(py3_venv) [ponnathan@pylab36b class4]$ python textfsm.py class4_ex6.template class4_ex6.txt 
+FSM Template:
+Value Filldown BGP_ROUTER_ID ([0-9\.]+)
+Value Filldown LOCAL_AS (\d+)
+Value PEER_IP ([0-9\.]+)
+Value REMOTE_AS (\d{4,6})
+Value UP_DOWN (\S+)
+Value STATE_PFXRCD (\S+)
+
+Start
+  ^BGP router identifier ${BGP_ROUTER_ID}, local AS number ${LOCAL_AS}\s*$$
+  ^Neighbor.*State.PfxRcd.*$$ -> BGPTable
+
+BGPTable
+  ^${PEER_IP}\s+4\s+${REMOTE_AS}\s+\d+\s+\d+\s+\d+\s+\d+\s+\d+\s+${UP_DOWN}\s+${STATE_PFXRCD} -> Record
+
+EOF
+
+
+Assign Var > : BGP_ROUTER_ID
+
+Assign Var > : LOCAL_AS
+
+State Transition > : BGPTable
+
+Assign Var > : PEER_IP
+
+Assign Var > : REMOTE_AS
+
+Assign Var > : UP_DOWN
+
+Assign Var > : STATE_PFXRCD
+
+RECORD > : ['128.223.51.103', '6447', '4.69.184.193', '3356', '4w5d', '720787']
+
+Assign Var > : PEER_IP
+
+Assign Var > : REMOTE_AS
+
+Assign Var > : UP_DOWN
+
+Assign Var > : STATE_PFXRCD
+
+RECORD > : ['128.223.51.103', '6447', '5.101.110.2', '14061', 'never', 'Active']
+
+Assign Var > : PEER_IP
+
+Assign Var > : REMOTE_AS
+
+Assign Var > : UP_DOWN
+
+Assign Var > : STATE_PFXRCD
+
+RECORD > : ['128.223.51.103', '6447', '12.0.1.63', '7018', '4w5d', '722337']
+
+Assign Var > : PEER_IP
+
+Assign Var > : REMOTE_AS
+
+Assign Var > : UP_DOWN
+
+Assign Var > : STATE_PFXRCD
+
+RECORD > : ['128.223.51.103', '6447', '37.139.139.0', '57866', '4w4d', '723278']
+
+Assign Var > : PEER_IP
+
+Assign Var > : REMOTE_AS
+
+Assign Var > : UP_DOWN
+
+Assign Var > : STATE_PFXRCD
+
+RECORD > : ['128.223.51.103', '6447', '64.71.137.241', '6939', '4w5d', '748249']
+
+Assign Var > : PEER_IP
+
+Assign Var > : REMOTE_AS
+
+Assign Var > : UP_DOWN
+
+Assign Var > : STATE_PFXRCD
+
+RECORD > : ['128.223.51.103', '6447', '66.59.190.221', '6539', 'never', 'Active']
+
+Assign Var > : PEER_IP
+
+Assign Var > : REMOTE_AS
+
+Assign Var > : UP_DOWN
+
+Assign Var > : STATE_PFXRCD
+
+RECORD > : ['128.223.51.103', '6447', '66.110.0.86', '6453', 'never', 'Idle']
+
+Assign Var > : PEER_IP
+
+Assign Var > : REMOTE_AS
+
+Assign Var > : UP_DOWN
+
+Assign Var > : STATE_PFXRCD
+
+RECORD > : ['128.223.51.103', '6447', '66.185.128.48', '1668', 'never', 'Active']
+
+Assign Var > : PEER_IP
+
+Assign Var > : REMOTE_AS
+
+Assign Var > : UP_DOWN
+
+Assign Var > : STATE_PFXRCD
+
+RECORD > : ['128.223.51.103', '6447', '69.31.111.244', '4436', 'never', 'Active']
+
+Assign Var > : PEER_IP
+
+Assign Var > : REMOTE_AS
+
+Assign Var > : UP_DOWN
+
+Assign Var > : STATE_PFXRCD
+
+RECORD > : ['128.223.51.103', '6447', '80.241.176.31', '20771', 'never', 'Active']
+
+Assign Var > : PEER_IP
+
+Assign Var > : REMOTE_AS
+
+Assign Var > : UP_DOWN
+
+Assign Var > : STATE_PFXRCD
+
+RECORD > : ['128.223.51.103', '6447', '89.149.178.10', '3257', '4w5d', '721998']
+
+Assign Var > : PEER_IP
+
+Assign Var > : REMOTE_AS
+
+Assign Var > : UP_DOWN
+
+Assign Var > : STATE_PFXRCD
+
+RECORD > : ['128.223.51.103', '6447', '91.218.184.60', '49788', '4w5d', '724514']
+
+Assign Var > : PEER_IP
+
+Assign Var > : REMOTE_AS
+
+Assign Var > : UP_DOWN
+
+Assign Var > : STATE_PFXRCD
+
+RECORD > : ['128.223.51.103', '6447', '94.142.247.3', '8283', '4w3d', '723358']
+
+FSM Table:
+['BGP_ROUTER_ID', 'LOCAL_AS', 'PEER_IP', 'REMOTE_AS', 'UP_DOWN', 'STATE_PFXRCD']
+['128.223.51.103', '6447', '4.69.184.193', '3356', '4w5d', '720787']
+['128.223.51.103', '6447', '5.101.110.2', '14061', 'never', 'Active']
+['128.223.51.103', '6447', '12.0.1.63', '7018', '4w5d', '722337']
+['128.223.51.103', '6447', '37.139.139.0', '57866', '4w4d', '723278']
+['128.223.51.103', '6447', '64.71.137.241', '6939', '4w5d', '748249']
+['128.223.51.103', '6447', '66.59.190.221', '6539', 'never', 'Active']
+['128.223.51.103', '6447', '66.110.0.86', '6453', 'never', 'Idle']
+['128.223.51.103', '6447', '66.185.128.48', '1668', 'never', 'Active']
+['128.223.51.103', '6447', '69.31.111.244', '4436', 'never', 'Active']
+['128.223.51.103', '6447', '80.241.176.31', '20771', 'never', 'Active']
+['128.223.51.103', '6447', '89.149.178.10', '3257', '4w5d', '721998']
+['128.223.51.103', '6447', '91.218.184.60', '49788', '4w5d', '724514']
+['128.223.51.103', '6447', '94.142.247.3', '8283', '4w3d', '723358']
+

@@ -1,0 +1,47 @@
+(py3_venv) [ponnathan@pylab36b class9]$ python class9_ex3.py 
+Password: 
+
+
+
+--------------------
+Diff before commiting for device cisco3.lasthop.io
+>>>>>>>>
++interface loopback102
++ description loopback102
++interface loopback103
++ description loopback103
+>>>>>>>>
+
+Diff after commiting for device cisco3.lasthop.io
+>>>>>>>>
+
+>>>>>>>>
+
+
+
+--------------------
+Diff before commiting for device arista1.lasthop.io
+>>>>>>>>
+@@ -53,6 +53,12 @@
+ interface Ethernet7
+    switchport access vlan 7
+ !
++interface Loopback100
++   description loopback100
++!
++interface Loopback101
++   description loopback101
++!
+ interface Management1
+    shutdown
+ !
+>>>>>>>>
+
+Diff after commiting for device arista1.lasthop.io
+>>>>>>>>
+
+>>>>>>>>
+
+
+
+

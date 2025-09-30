@@ -1,0 +1,43 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl8_ls2_netconf_example.py 
+Password: 
+> /home/ponnathan/GIT/netmiko/class8/lessons/cl8_ls2_netconf_example.py(22)<module>()
+     21 ipdb.set_trace()
+---> 22 config = conn.get_config(source="running")
+     23 config_xml = config.data_xml
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class8/lessons/cl8_ls2_netconf_example.py(23)<module>()
+     22 config = conn.get_config(source="running")
+---> 23 config_xml = config.data_xml
+     24 print(config_xml)
+
+ipdb> list
+     18     timeout=60,
+     19 )
+     20 
+     21 ipdb.set_trace()
+     22 config = conn.get_config(source="running")
+---> 23 config_xml = config.data_xml
+     24 print(config_xml)
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class8/lessons/cl8_ls2_netconf_example.py(24)<module>()
+     22 config = conn.get_config(source="running")
+     23 config_xml = config.data_xml
+---> 24 print(config_xml)
+
+ipdb> n
+<?xml version="1.0" encoding="UTF-8"?><rpc-reply message-id="urn:uuid:a65089a7-7269-4982-a5ba-b8459463d740"><data><configuration commit-seconds="1758737364" commit-localtime="2025-09-24 11:09:24 PDT" commit-user="pyclass"><version>12.1X46-D35.1</version><comment># Reset configuration back to pynet standard config</comment><system><host-name>srx2</host-name><time-zone>America/Los_Angeles</time-zone><location><building>San Francisco</building></location><root-authentication><encrypted-password>$1$UDEQns1Q$EiZM1alOx.1DO3WNOz8iW.</encrypted-password></root-authentication><name-server><name>1.1.1.1</name></name-server><name-server><name>8.8.8.8</name></name-server><login><user><name>admin</name><uid>2001</uid><class>super-user</class><authentication><encrypted-password>$1$yoajmPix$8zbI8teGohrepw1Z/kdOF/</encrypted-password></authentication></user><user><name>pyclass</name><uid>2000</uid><class>super-user</class><authentication><encrypted-password>$1$/0rnYesX$FIwu133NvE1/puR3lySF11</encrypted-password></authentication></user><password><minimum-changes>0</minimum-changes></password></login><services><ssh><protocol-version>v2</protocol-version></ssh><netconf><ssh>
+                </ssh></netconf></services><syslog><archive><size>120k</size><files>3</files></archive><user><name>*</name><contents><name>any</name><emergency/></contents></user><file><name>messages</name><contents><name>any</name><critical/></contents><contents><name>authorization</name><info/></contents></file><file><name>interactive-commands</name><contents><name>interactive-commands</name><error/></contents></file><log-rotate-frequency>5</log-rotate-frequency></syslog><max-configurations-on-flash>5</max-configurations-on-flash><max-configuration-rollbacks>5</max-configuration-rollbacks><license><autoupdate><url><name>https://ae1.juniper.net/junos/key_retrieval</name></url></autoupdate></license><ntp><server><name>130.126.24.24</name></server><server><name>152.2.21.1</name></server></ntp></system><interfaces><interface><name>fe-0/0/0</name><unit><name>0</name></unit></interface><interface><name>fe-0/0/1</name><unit><name>0</name><family><ethernet-switching><vlan><members>vlan-trust</members></vlan></ethernet-switching></family></unit></interface><interface><name>fe-0/0/2</name><unit><name>0</name><family><ethernet-switching><vlan><members>vlan-trust</members></vlan></ethernet-switching></family></unit></interface><interface><name>fe-0/0/3</name><unit><name>0</name><family><ethernet-switching><vlan><members>vlan-trust</members></vlan></ethernet-switching></family></unit></interface><interface><name>fe-0/0/4</name><unit><name>0</name><family><ethernet-switching><vlan><members>vlan-trust</members></vlan></ethernet-switching></family></unit></interface><interface><name>fe-0/0/5</name><unit><name>0</name><family><ethernet-switching><vlan><members>vlan-trust</members></vlan></ethernet-switching></family></unit></interface><interface><name>fe-0/0/6</name><unit><name>0</name><family><ethernet-switching><vlan><members>vlan-trust</members></vlan></ethernet-switching></family></unit></interface><interface><name>fe-0/0/7</name><unit><name>0</name><family><ethernet-switching><vlan><members>vlan-trust</members></vlan></ethernet-switching></family></unit></interface><interface><name>pt-1/0/0</name><unit><name>0</name></unit></interface><interface><name>vlan</name><unit><name>0</name><description>Management Vlan 0</description><family><inet><address><name>10.220.88.42/24</name></address></inet></family></unit></interface></interfaces><routing-options><static><route><name>0.0.0.0/0</name><next-hop>10.220.88.1</next-hop></route></static></routing-options><protocols><lldp><interface><name>all</name></interface></lldp><stp>
+        </stp></protocols><security><screen><ids-option><name>untrust-screen</name><icmp><ping-death/></icmp><ip><source-route-option/><tear-drop/></ip><tcp><syn-flood><alarm-threshold>1024</alarm-threshold><attack-threshold>200</attack-threshold><source-threshold>1024</source-threshold><destination-threshold>2048</destination-threshold><timeout>20</timeout></syn-flood><land/></tcp></ids-option></screen><nat><source><rule-set><name>trust-to-untrust</name><from><zone>trust</zone></from><to><zone>untrust</zone></to><rule><name>source-nat-rule</name><src-nat-rule-match><source-address>0.0.0.0/0</source-address></src-nat-rule-match><then><source-nat><interface>
+                                </interface></source-nat></then></rule></rule-set></source></nat><policies><policy><from-zone-name>trust</from-zone-name><to-zone-name>untrust</to-zone-name><policy><name>trust-to-untrust</name><match><source-address>any</source-address><destination-address>any</destination-address><application>any</application></match><then><permit>
+                        </permit></then></policy></policy></policies><zones><security-zone><name>trust</name><host-inbound-traffic><system-services><name>all</name></system-services><protocols><name>all</name></protocols></host-inbound-traffic><interfaces><name>vlan.0</name></interfaces></security-zone><security-zone><name>untrust</name><screen>untrust-screen</screen><interfaces><name>fe-0/0/0.0</name><host-inbound-traffic><system-services><name>dhcp</name></system-services><system-services><name>tftp</name></system-services></host-inbound-traffic></interfaces><interfaces><name>pt-1/0/0.0</name><host-inbound-traffic><system-services><name>dhcp</name></system-services><system-services><name>tftp</name></system-services></host-inbound-traffic></interfaces></security-zone></zones></security><firewall><family><inet><filter><name>EXTERNAL-IN-V4</name><term><name>BLOCK-SPOOFED</name><from><source-address><name>17.255.254.0/23</name></source-address><source-address><name>17.255.252.0/22</name></source-address></from><then><discard>
+                            </discard></then></term></filter></inet></family></firewall><vlans><vlan><name>vlan-trust</name><vlan-id>3</vlan-id><l3-interface>vlan.0</l3-interface></vlan></vlans></configuration></data></rpc-reply>
+--Return--
+None
+> /home/ponnathan/GIT/netmiko/class8/lessons/cl8_ls2_netconf_example.py(24)<module>()
+     22 config = conn.get_config(source="running")
+     23 config_xml = config.data_xml
+---> 24 print(config_xml)
+
+

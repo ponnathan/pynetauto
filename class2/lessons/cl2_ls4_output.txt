@@ -1,0 +1,8 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl2_ls4.py
+Password:
+cisco1#
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+cisco1(config)#logging buffered 20000
+cisco1(config)#end
+cisco1#

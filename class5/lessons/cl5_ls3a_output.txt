@@ -1,0 +1,5 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl5_ls3a.py 
+
+some text with expressions 16
+other expressions 91
+hello

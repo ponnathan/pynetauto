@@ -1,0 +1,63 @@
+(py3_venv) [ponnathan@pylab36b class2]$ python netmikoex5.py
+Password:
+
+################################################################################
+CFG Change:
+ configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+
+nxos1(config)#  vlan 500
+
+nxos1(config-vlan)#   name blue500
+
+nxos1(config-vlan)# vlan 501
+
+nxos1(config-vlan)#   name blue501
+
+nxos1(config-vlan)# vlan 502
+
+nxos1(config-vlan)#   name blue502
+
+nxos1(config-vlan)# vlan 503
+
+nxos1(config-vlan)#   name blue503
+
+nxos1(config-vlan)# vlan 504
+
+nxos1(config-vlan)#   name blue504
+
+nxos1(config-vlan)#  end
+
+nxos1#
+################################################################################
+
+
+################################################################################
+CFG Change:
+ configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+
+nxos2(config)#  vlan 500
+
+nxos2(config-vlan)#   name blue500
+
+nxos2(config-vlan)# vlan 501
+
+nxos2(config-vlan)#   name blue501
+
+nxos2(config-vlan)# vlan 502
+
+nxos2(config-vlan)#   name blue502
+
+nxos2(config-vlan)# vlan 503
+
+nxos2(config-vlan)#   name blue503
+
+nxos2(config-vlan)# vlan 504
+
+nxos2(config-vlan)#   name blue504
+
+nxos2(config-vlan)#  end
+
+nxos2#
+################################################################################

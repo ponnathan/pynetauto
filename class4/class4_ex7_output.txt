@@ -1,0 +1,62 @@
+(py3_venv) [ponnathan@pylab36b class4]$ python class4_ex7.py 
+State Transition > : Interfaces
+
+Assign Var > : PORT_NAME
+
+Assign Var > : STATUS
+
+Assign Var > : VLAN
+
+Assign Var > : DUPLEX
+
+Assign Var > : SPEED
+
+Assign Var > : PORT_TYPE
+
+RECORD > : ['Gi0/1/0', 'notconnect', '1', 'auto', 'auto', '10/100/1000BaseTX']
+
+Assign Var > : PORT_NAME
+
+Assign Var > : STATUS
+
+Assign Var > : VLAN
+
+Assign Var > : DUPLEX
+
+Assign Var > : SPEED
+
+Assign Var > : PORT_TYPE
+
+RECORD > : ['Gi0/1/1', 'notconnect', '1', 'auto', 'auto', '10/100/1000BaseTX']
+
+Assign Var > : PORT_NAME
+
+Assign Var > : STATUS
+
+Assign Var > : VLAN
+
+Assign Var > : DUPLEX
+
+Assign Var > : SPEED
+
+Assign Var > : PORT_TYPE
+
+RECORD > : ['Gi0/1/2', 'notconnect', '1', 'auto', 'auto', '10/100/1000BaseTX']
+
+Assign Var > : PORT_NAME
+
+Assign Var > : STATUS
+
+Assign Var > : VLAN
+
+Assign Var > : DUPLEX
+
+Assign Var > : SPEED
+
+Assign Var > : PORT_TYPE
+
+RECORD > : ['Gi0/1/3', 'notconnect', '1', 'auto', 'auto', '10/100/1000BaseTX']
+
+
+[{'PORT_NAME': 'Gi0/1/0', 'STATUS': 'notconnect', 'VLAN': '1', 'DUPLEX': 'auto', 'SPEED': 'auto', 'PORT_TYPE': '10/100/1000BaseTX'}, {'PORT_NAME': 'Gi0/1/1', 'STATUS': 'notconnect', 'VLAN': '1', 'DUPLEX': 'auto', 'SPEED': 'auto', 'PORT_TYPE': '10/100/1000BaseTX'}, {'PORT_NAME': 'Gi0/1/2', 'STATUS': 'notconnect', 'VLAN': '1', 'DUPLEX': 'auto', 'SPEED': 'auto', 'PORT_TYPE': '10/100/1000BaseTX'}, {'PORT_NAME': 'Gi0/1/3', 'STATUS': 'notconnect', 'VLAN': '1', 'DUPLEX': 'auto', 'SPEED': 'auto', 'PORT_TYPE': '10/100/1000BaseTX'}]
+

@@ -1,0 +1,61 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python textfsm.py show_ip_int_brief.template show_ip_int_brief.txt 
+FSM Template:
+Value INTERFACE (\S+)
+Value IP_ADDR (\S+)
+
+Start
+  ^Interface.*Protocol\s*$$ -> ShowIPIntBrief
+
+ShowIPIntBrief
+  ^${INTERFACE}\s+${IP_ADDR}\s+ -> Record
+
+EOF
+
+
+State Transition > : ShowIPIntBrief
+
+Assign Var > : INTERFACE
+
+Assign Var > : IP_ADDR
+
+RECORD > : ['FastEthernet0', 'unassigned']
+
+Assign Var > : INTERFACE
+
+Assign Var > : IP_ADDR
+
+RECORD > : ['FastEthernet1', 'unassigned']
+
+Assign Var > : INTERFACE
+
+Assign Var > : IP_ADDR
+
+RECORD > : ['FastEthernet2', 'unassigned']
+
+Assign Var > : INTERFACE
+
+Assign Var > : IP_ADDR
+
+RECORD > : ['FastEthernet3', 'unassigned']
+
+Assign Var > : INTERFACE
+
+Assign Var > : IP_ADDR
+
+RECORD > : ['FastEthernet4', '10.220.88.20']
+
+Assign Var > : INTERFACE
+
+Assign Var > : IP_ADDR
+
+RECORD > : ['Vlan1', 'unassigned']
+
+FSM Table:
+['INTERFACE', 'IP_ADDR']
+['FastEthernet0', 'unassigned']
+['FastEthernet1', 'unassigned']
+['FastEthernet2', 'unassigned']
+['FastEthernet3', 'unassigned']
+['FastEthernet4', '10.220.88.20']
+['Vlan1', 'unassigned']
+

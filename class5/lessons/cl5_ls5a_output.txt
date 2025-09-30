@@ -1,0 +1,4 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl5_ls5a.py 
+interface GigabitEthernet0/0/0
+ ip address 10.220.88.22 255.255.255.0
+ negotiation auto

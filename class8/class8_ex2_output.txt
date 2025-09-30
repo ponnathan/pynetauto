@@ -1,0 +1,41 @@
+(py3_venv) [ponnathan@pylab36b class8]$ python class8_ex2.py 
+Password: 
+
+
+
+Device srx2.lasthop.io is connected!
+
+Print out desired output from device, route, and arp information
+--------------------
+{'arp_table': [('00:24:c4:e9:48:ae',
+                [('mac_address', '00:24:c4:e9:48:ae'),
+                 ('ip_address', '10.220.88.1'),
+                 ('interface_name', 'vlan.0')]),
+               ('c8:9c:1d:ea:0e:b6',
+                [('mac_address', 'c8:9c:1d:ea:0e:b6'),
+                 ('ip_address', '10.220.88.20'),
+                 ('interface_name', 'vlan.0')]),
+               ('50:2f:a8:b1:69:00',
+                [('mac_address', '50:2f:a8:b1:69:00'),
+                 ('ip_address', '10.220.88.23'),
+                 ('interface_name', 'vlan.0')])],
+ 'connected_port': 830,
+ 'connected_user': 'pyclass',
+ 'hostname': 'srx2.lasthop.io',
+ 'route_table': [('0.0.0.0/0',
+                  [('protocol', 'Static'),
+                   ('via', 'vlan.0'),
+                   ('age', 50123312),
+                   ('nexthop', '10.220.88.1')]),
+                 ('10.220.88.0/24',
+                  [('protocol', 'Direct'),
+                   ('via', 'vlan.0'),
+                   ('age', 50123312),
+                   ('nexthop', None)]),
+                 ('10.220.88.42/32',
+                  [('protocol', 'Local'),
+                   ('via', 'vlan.0'),
+                   ('age', 50123331),
+                   ('nexthop', None)])]}
+
+

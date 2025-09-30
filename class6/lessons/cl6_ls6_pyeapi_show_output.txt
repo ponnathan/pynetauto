@@ -1,0 +1,111 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ ipython -i cl6_ls3_pyeapi_show.py 
+Python 3.11.6 (main, Oct  4 2023, 18:55:41) [GCC 11.4.1 20230605 (Red Hat 11.4.1-2)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.31.1 -- An enhanced Interactive Python. Type '?' for help.
+Password: 
+[{'command': 'show version', 'result': {'imageFormatVersion': '1.0', 'uptime': 50059257.45, 'modelName': 'vEOS-lab', 'internalVersion': '4.28.0F-26924507.4280F', 'memTotal': 4000292, 'mfgName': 'Arista', 'serialNumber': '', 'systemMacAddress': '00:aa:87:7d:c6:e5', 'bootupTimestamp': 1709134820.183367, 'memFree': 3118220, 'version': '4.28.0F', 'configMacAddress': '00:00:00:00:00:00', 'isIntlVersion': False, 'imageOptimization': 'None', 'internalBuildId': 'a2df8007-1f3a-4b15-b7d2-b74f9ee07c71', 'hardwareRevision': '', 'hwMacAddress': '00:00:00:00:00:00', 'architecture': 'i686'}, 'encoding': 'json'}, {'command': 'show ip arp', 'result': {'dynamicEntries': 2, 'ipV4Neighbors': [{'hwAddress': '0024.c4e9.48ae', 'address': '10.220.88.1', 'interface': 'Vlan1, Ethernet1', 'age': 0}, {'hwAddress': 'c89c.1dea.0eb6', 'address': '10.220.88.20', 'interface': 'Vlan1, Ethernet1', 'age': 184}], 'notLearnedEntries': 0, 'totalEntries': 2, 'staticEntries': 0}, 'encoding': 'json'}]
+
+In [1]: print(output)
+[{'command': 'show version', 'result': {'imageFormatVersion': '1.0', 'uptime': 50059257.45, 'modelName': 'vEOS-lab', 'internalVersion': '4.28.0F-26924507.4280F', 'memTotal': 4000292, 'mfgName': 'Arista', 'serialNumber': '', 'systemMacAddress': '00:aa:87:7d:c6:e5', 'bootupTimestamp': 1709134820.183367, 'memFree': 3118220, 'version': '4.28.0F', 'configMacAddress': '00:00:00:00:00:00', 'isIntlVersion': False, 'imageOptimization': 'None', 'internalBuildId': 'a2df8007-1f3a-4b15-b7d2-b74f9ee07c71', 'hardwareRevision': '', 'hwMacAddress': '00:00:00:00:00:00', 'architecture': 'i686'}, 'encoding': 'json'}, {'command': 'show ip arp', 'result': {'dynamicEntries': 2, 'ipV4Neighbors': [{'hwAddress': '0024.c4e9.48ae', 'address': '10.220.88.1', 'interface': 'Vlan1, Ethernet1', 'age': 0}, {'hwAddress': 'c89c.1dea.0eb6', 'address': '10.220.88.20', 'interface': 'Vlan1, Ethernet1', 'age': 184}], 'notLearnedEntries': 0, 'totalEntries': 2, 'staticEntries': 0}, 'encoding': 'json'}]
+
+In [2]: from pprint import pprint
+
+In [3]: pprint(output)
+[{'command': 'show version',
+  'encoding': 'json',
+  'result': {'architecture': 'i686',
+             'bootupTimestamp': 1709134820.183367,
+             'configMacAddress': '00:00:00:00:00:00',
+             'hardwareRevision': '',
+             'hwMacAddress': '00:00:00:00:00:00',
+             'imageFormatVersion': '1.0',
+             'imageOptimization': 'None',
+             'internalBuildId': 'a2df8007-1f3a-4b15-b7d2-b74f9ee07c71',
+             'internalVersion': '4.28.0F-26924507.4280F',
+             'isIntlVersion': False,
+             'memFree': 3118220,
+             'memTotal': 4000292,
+             'mfgName': 'Arista',
+             'modelName': 'vEOS-lab',
+             'serialNumber': '',
+             'systemMacAddress': '00:aa:87:7d:c6:e5',
+             'uptime': 50059257.45,
+             'version': '4.28.0F'}},
+ {'command': 'show ip arp',
+  'encoding': 'json',
+  'result': {'dynamicEntries': 2,
+             'ipV4Neighbors': [{'address': '10.220.88.1',
+                                'age': 0,
+                                'hwAddress': '0024.c4e9.48ae',
+                                'interface': 'Vlan1, Ethernet1'},
+                               {'address': '10.220.88.20',
+                                'age': 184,
+                                'hwAddress': 'c89c.1dea.0eb6',
+                                'interface': 'Vlan1, Ethernet1'}],
+             'notLearnedEntries': 0,
+             'staticEntries': 0,
+             'totalEntries': 2}}]
+
+In [4]: pprint(output[0])
+{'command': 'show version',
+ 'encoding': 'json',
+ 'result': {'architecture': 'i686',
+            'bootupTimestamp': 1709134820.183367,
+            'configMacAddress': '00:00:00:00:00:00',
+            'hardwareRevision': '',
+            'hwMacAddress': '00:00:00:00:00:00',
+            'imageFormatVersion': '1.0',
+            'imageOptimization': 'None',
+            'internalBuildId': 'a2df8007-1f3a-4b15-b7d2-b74f9ee07c71',
+            'internalVersion': '4.28.0F-26924507.4280F',
+            'isIntlVersion': False,
+            'memFree': 3118220,
+            'memTotal': 4000292,
+            'mfgName': 'Arista',
+            'modelName': 'vEOS-lab',
+            'serialNumber': '',
+            'systemMacAddress': '00:aa:87:7d:c6:e5',
+            'uptime': 50059257.45,
+            'version': '4.28.0F'}}
+
+In [5]: pprint(output[1])
+{'command': 'show ip arp',
+ 'encoding': 'json',
+ 'result': {'dynamicEntries': 2,
+            'ipV4Neighbors': [{'address': '10.220.88.1',
+                               'age': 0,
+                               'hwAddress': '0024.c4e9.48ae',
+                               'interface': 'Vlan1, Ethernet1'},
+                              {'address': '10.220.88.20',
+                               'age': 184,
+                               'hwAddress': 'c89c.1dea.0eb6',
+                               'interface': 'Vlan1, Ethernet1'}],
+            'notLearnedEntries': 0,
+            'staticEntries': 0,
+            'totalEntries': 2}}
+
+In [6]: pprint(output[0]['result'])
+{'architecture': 'i686',
+ 'bootupTimestamp': 1709134820.183367,
+ 'configMacAddress': '00:00:00:00:00:00',
+ 'hardwareRevision': '',
+ 'hwMacAddress': '00:00:00:00:00:00',
+ 'imageFormatVersion': '1.0',
+ 'imageOptimization': 'None',
+ 'internalBuildId': 'a2df8007-1f3a-4b15-b7d2-b74f9ee07c71',
+ 'internalVersion': '4.28.0F-26924507.4280F',
+ 'isIntlVersion': False,
+ 'memFree': 3118220,
+ 'memTotal': 4000292,
+ 'mfgName': 'Arista',
+ 'modelName': 'vEOS-lab',
+ 'serialNumber': '',
+ 'systemMacAddress': '00:aa:87:7d:c6:e5',
+ 'uptime': 50059257.45,
+ 'version': '4.28.0F'}
+
+In [7]: pprint(output[0]['result']['systemMacAddress'])
+'00:aa:87:7d:c6:e5'
+
+In [8]: quit
+

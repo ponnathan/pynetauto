@@ -1,0 +1,195 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl6_ls3_eapi_simple.py 
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(17)<module>()
+     16 
+---> 17     http_headers = {"Content-Type": "application/json-rpc;"}
+     18     host = "arista8.lasthop.io"
+
+ipdb> list
+     12 
+     13 if __name__ == "__main__":
+     14 
+     15     ipdb.set_trace()
+     16 
+---> 17     http_headers = {"Content-Type": "application/json-rpc;"}
+     18     host = "arista8.lasthop.io"
+     19     port = 443
+     20     username = "pyclass"
+     21     password = os.getenv("PYNET_PASSWORD") if os.getenv("PYNET_PASSWORD") else getpass()
+     22 
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(18)<module>()
+     17     http_headers = {"Content-Type": "application/json-rpc;"}
+---> 18     host = "arista8.lasthop.io"
+     19     port = 443
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(19)<module>()
+     18     host = "arista8.lasthop.io"
+---> 19     port = 443
+     20     username = "pyclass"
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(20)<module>()
+     19     port = 443
+---> 20     username = "pyclass"
+     21     password = os.getenv("PYNET_PASSWORD") if os.getenv("PYNET_PASSWORD") else getpass()
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(21)<module>()
+     20     username = "pyclass"
+---> 21     password = os.getenv("PYNET_PASSWORD") if os.getenv("PYNET_PASSWORD") else getpass()
+     22 
+
+ipdb> n
+Password: 
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(23)<module>()
+     22 
+---> 23     url = "https://{}:{}/command-api".format(host, port)
+     24 
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(26)<module>()
+     25     json_payload = {
+---> 26         "jsonrpc": "2.0",
+     27         "method": "runCmds",
+
+ipdb> pp_payload
+*** NameError: name 'pp_payload' is not defined
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(27)<module>()
+     26         "jsonrpc": "2.0",
+---> 27         "method": "runCmds",
+     28         "params": {"version": 1, "cmds": ["show version"], "format": "json"},
+
+ipdb> 
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(28)<module>()
+     27         "method": "runCmds",
+---> 28         "params": {"version": 1, "cmds": ["show version"], "format": "json"},
+     29         "id": "1",
+
+ipdb> 
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(29)<module>()
+     28         "params": {"version": 1, "cmds": ["show version"], "format": "json"},
+---> 29         "id": "1",
+     30     }
+
+ipdb> 
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(25)<module>()
+     24 
+---> 25     json_payload = {
+     26         "jsonrpc": "2.0",
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(31)<module>()
+     30     }
+---> 31     json_data = json.dumps(json_payload)
+     32     http_headers["Content-length"] = str(len(json_data))
+
+ipdb> pp json_payload
+{'id': '1',
+ 'jsonrpc': '2.0',
+ 'method': 'runCmds',
+ 'params': {'cmds': ['show version'], 'format': 'json', 'version': 1}}
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(32)<module>()
+     31     json_data = json.dumps(json_payload)
+---> 32     http_headers["Content-length"] = str(len(json_data))
+     33 
+
+ipdb> p json_data
+'{"jsonrpc": "2.0", "method": "runCmds", "params": {"version": 1, "cmds": ["show version"], "format": "json"}, "id": "1"}'
+ipdb> p http_headers
+{'Content-Type': 'application/json-rpc;'}
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(34)<module>()
+     33 
+---> 34     response = requests.post(
+     35         url,
+
+ipdb> p http_headers
+{'Content-Type': 'application/json-rpc;', 'Content-length': '120'}
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(35)<module>()
+     34     response = requests.post(
+---> 35         url,
+     36         headers=http_headers,
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(36)<module>()
+     35         url,
+---> 36         headers=http_headers,
+     37         auth=(username, password),
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(37)<module>()
+     36         headers=http_headers,
+---> 37         auth=(username, password),
+     38         data=json_data,
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(38)<module>()
+     37         auth=(username, password),
+---> 38         data=json_data,
+     39         verify=False,
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(39)<module>()
+     38         data=json_data,
+---> 39         verify=False,
+     40     )
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(34)<module>()
+     33 
+---> 34     response = requests.post(
+     35         url,
+
+ipdb> p response
+*** NameError: name 'response' is not defined
+ipdb> p response
+*** NameError: name 'response' is not defined
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(41)<module>()
+     40     )
+---> 41     response = response.json()
+     42 
+
+ipdb> response
+<Response [200]>
+ipdb> response.__dict__
+{'_content': b'{"jsonrpc": "2.0", "id": "1", "result": [{"imageFormatVersion": "1.0", "uptime": 49976062.36, "modelName": "vEOS-lab", "internalVersion": "4.28.0F-26924507.4280F", "memTotal": 4000292, "mfgName": "Arista", "serialNumber": "", "systemMacAddress": "00:aa:87:7d:c6:e5", "bootupTimestamp": 1709134820.188481, "memFree": 3119172, "version": "4.28.0F", "configMacAddress": "00:00:00:00:00:00", "isIntlVersion": false, "imageOptimization": "None", "internalBuildId": "a2df8007-1f3a-4b15-b7d2-b74f9ee07c71", "hardwareRevision": "", "hwMacAddress": "00:00:00:00:00:00", "architecture": "i686"}]}', '_content_consumed': True, '_next': None, 'status_code': 200, 'headers': {'Server': 'nginx', 'Date': 'Mon, 29 Sep 2025 01:54:42 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-control': 'no-store, no-cache, must-revalidate, max-age=0, pre-check=0, post-check=0', 'Pragma': 'no-cache', 'Content-Encoding': 'gzip'}, 'raw': <urllib3.response.HTTPResponse object at 0x7f42e647a260>, 'url': 'https://arista8.lasthop.io:443/command-api', 'encoding': 'utf-8', 'history': [], 'reason': 'OK', 'cookies': <RequestsCookieJar[]>, 'elapsed': datetime.timedelta(microseconds=196838), 'request': <PreparedRequest [POST]>, 'connection': <requests.adapters.HTTPAdapter object at 0x7f42e6485950>}
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(43)<module>()
+     42 
+---> 43     print()
+     44     pprint(response)
+
+ipdb> 
+
+> /home/ponnathan/GIT/netmiko/class6/lessons/cl6_ls3_eapi_simple.py(44)<module>()
+     43     print()
+---> 44     pprint(response)
+     45     print()
+
+ipdb> pp response
+{'id': '1',
+ 'jsonrpc': '2.0',
+ 'result': [{'architecture': 'i686',
+             'bootupTimestamp': 1709134820.188481,
+             'configMacAddress': '00:00:00:00:00:00',
+             'hardwareRevision': '',
+             'hwMacAddress': '00:00:00:00:00:00',
+             'imageFormatVersion': '1.0',
+             'imageOptimization': 'None',
+             'internalBuildId': 'a2df8007-1f3a-4b15-b7d2-b74f9ee07c71',
+             'internalVersion': '4.28.0F-26924507.4280F',
+             'isIntlVersion': False,
+             'memFree': 3119172,
+             'memTotal': 4000292,
+             'mfgName': 'Arista',
+             'modelName': 'vEOS-lab',
+             'serialNumber': '',
+             'systemMacAddress': '00:aa:87:7d:c6:e5',
+             'uptime': 49976062.36,
+             'version': '4.28.0F'}]}

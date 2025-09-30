@@ -1,0 +1,5 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python netmiko_connect.py
+Password: 
+cisco3#
+mypersonalkey
+(py3_venv) [ponnathan@pylab36b lessons]$ 

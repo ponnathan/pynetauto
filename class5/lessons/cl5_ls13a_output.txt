@@ -1,0 +1,23 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl5_ls13a.py 
+
+Some text
+Hello World
+
+ARP Interface:
+mgmt0
+
+MAC --> IP
+2C:C2:60:36:32:21 --> 10.0.0.72
+
+For loop in dict
+    interface
+    ip
+    mac
+    age
+
+For loop in dict (using items)
+    interface --> mgmt0
+    ip --> 10.0.0.72
+    mac --> 2C:C2:60:36:32:21
+    age --> 140.0
+

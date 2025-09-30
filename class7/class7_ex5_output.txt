@@ -1,0 +1,15 @@
+(py3_venv) [ponnathan@pylab36b class7]$ python class7_ex5.py 
+
+
+
+Print default document namespace mapping
+--------------------
+Document default Namespace:
+ {'nf': 'urn:ietf:params:xml:ns:netconf:base:1.0', None: 'http://www.cisco.com/nxos:1.0:sysmgrcli'}
+
+
+
+Print the proc_board_id element using namespace wildcard
+--------------------
+TM60363221B
+

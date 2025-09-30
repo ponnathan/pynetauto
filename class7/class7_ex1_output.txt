@@ -1,0 +1,83 @@
+(py3_venv) [ponnathan@pylab36b class7]$ python class7_ex1.py 
+
+
+
+Print the XML variable and its type.
+--------------------
+<Element zones-information at 0x7f1911fa1640>
+<class 'lxml.etree._Element'>
+
+
+
+Print the XML tree
+--------------------
+<zones-information>
+    <zones-security>
+        <zones-security-zonename>trust</zones-security-zonename>
+        <zones-security-send-reset>Off</zones-security-send-reset>
+        <zones-security-policy-configurable>Yes</zones-security-policy-configurable>
+        <zones-security-interfaces-bound>1</zones-security-interfaces-bound>
+        <zones-security-interfaces>
+            <zones-security-interface-name>vlan.0</zones-security-interface-name>
+        </zones-security-interfaces>
+    </zones-security>
+    <zones-security>
+        <zones-security-zonename>untrust</zones-security-zonename>
+        <zones-security-send-reset>Off</zones-security-send-reset>
+        <zones-security-policy-configurable>Yes</zones-security-policy-configurable>
+        <zones-security-screen>untrust-screen</zones-security-screen>
+        <zones-security-interfaces-bound>2</zones-security-interfaces-bound>
+        <zones-security-interfaces>
+            <zones-security-interface-name>fe-0/0/0.0</zones-security-interface-name>
+            <zones-security-interface-name>pt-1/0/0.0</zones-security-interface-name>
+        </zones-security-interfaces>
+    </zones-security>
+    <zones-security>
+        <zones-security-zonename>junos-host</zones-security-zonename>
+        <zones-security-send-reset>Off</zones-security-send-reset>
+        <zones-security-policy-configurable>Yes</zones-security-policy-configurable>
+        <zones-security-interfaces-bound>0</zones-security-interfaces-bound>
+        <zones-security-interfaces>
+        </zones-security-interfaces>
+    </zones-security>
+</zones-information>
+
+
+
+Print the name (tag) of the root element
+--------------------
+zones-information
+
+Print the number of direct children of the root
+--------------------
+3
+
+
+
+Print the child tag using list indices
+--------------------
+zones-security
+
+Print the child tag using getchildren()
+--------------------
+zones-security
+
+
+
+Create 'trust_zone' variable and print text of the 'name' child tag
+--------------------
+Security zone: trust
+
+
+
+All children of the 'trust_zone'
+--------------------
+zones-security-zonename
+zones-security-send-reset
+zones-security-policy-configurable
+zones-security-interfaces-bound
+zones-security-interfaces
+
+
+
+

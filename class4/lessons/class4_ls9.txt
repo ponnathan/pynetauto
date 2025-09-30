@@ -1,0 +1,30 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python textfsm.py show_version.template show_version.txt 
+FSM Template:
+Value MODEL (\S+)
+Value MEMORY (\d+K)
+Value SERIAL_NUMBER (\S+)
+Value CONFIG_REGISTER (0x\d+)
+
+Start
+  ^cisco ${MODEL}\s+.*processor with ${MEMORY}/\d+K bytes of memory
+  ^Processor board ID ${SERIAL_NUMBER}
+  ^Configuration register is ${CONFIG_REGISTER} -> Record
+
+EOF
+
+
+Assign Var > : MODEL
+
+Assign Var > : MEMORY
+
+Assign Var > : SERIAL_NUMBER
+
+Assign Var > : CONFIG_REGISTER
+
+RECORD > : ['C1111-4P', '1456982K', 'FGL222290LB', '0x2102']
+
+FSM Table:
+['MODEL', 'MEMORY', 'SERIAL_NUMBER', 'CONFIG_REGISTER']
+['C1111-4P', '1456982K', 'FGL222290LB', '0x2102']
+(py3_venv) [ponnathan@pylab36b lessons]$ 
+

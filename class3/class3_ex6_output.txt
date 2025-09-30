@@ -1,0 +1,7 @@
+(py3_venv) [ponnathan@pylab36b class3]$ python class3_ex6.py 
+
+Interface Line: interface GigabitEthernet0/0/0
+IP Address Line:  ip address 10.220.88.23 255.255.255.0
+
+
+(py3_venv) [ponnathan@pylab36b class3]$ 

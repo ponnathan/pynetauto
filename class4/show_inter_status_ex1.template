@@ -1,0 +1,7 @@
+Value PORT_NAME (\S+)
+
+Start
+  ^\s*Port\s+Name\s+Status.* -> Interfaces
+
+Interfaces
+  ^\s*${PORT_NAME}\s+.* -> Record

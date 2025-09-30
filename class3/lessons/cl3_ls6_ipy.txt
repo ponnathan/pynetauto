@@ -1,0 +1,370 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ ipython
+Python 3.11.6 (main, Oct  4 2023, 18:55:41) [GCC 11.4.1 20230605 (Red Hat 11.4.1-2)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.31.1 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: from ciscoconfparse import CiscoConfParse
+
+In [2]: CiscoConfParse('cisco1.txt")
+  File "<ipython-input-2-739aba02aa98>", line 1
+    CiscoConfParse('cisco1.txt")
+                   ^
+SyntaxError: unterminated string literal (detected at line 1)
+
+
+In [3]: CiscoConfParse("cisco1.txt")
+Out[3]: <CiscoConfParse: 245 lines / syntax: ios / comment delimiter: '!' / factory: False / ignore_blank_lines: True / encoding: 'UTF-8'>
+
+In [4]: cisco_obj = CiscoConfParse("cisco1.txt")
+
+In [5]: cisco_obj
+Out[5]: <CiscoConfParse: 245 lines / syntax: ios / comment delimiter: '!' / factory: False / ignore_blank_lines: True / encoding: 'UTF-8'>
+
+In [6]: my_config = """
+   ...: interface FastEthernet3
+   ...:  no ip address
+   ...: !
+   ...: interface FastEthernet4
+   ...:  description *** LAN connection (don't change) ***
+   ...:  ip address 10.220.88.20 255.255.255.0
+   ...:  duplex auto
+   ...:  speed auto
+   ...:  """
+
+In [7]: CiscoConfParse(my_config)
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+<ipython-input-7-b7c4b805aac9> in <module>
+----> 1 CiscoConfParse(my_config)
+
+~/VENV/py3_venv/lib/python3.11/site-packages/loguru/_logger.py in catch_wrapper(*args, **kwargs)
+   1275                     def catch_wrapper(*args, **kwargs):
+   1276                         with catcher:
+-> 1277                             return function(*args, **kwargs)
+   1278                         return default
+   1279 
+
+~/VENV/py3_venv/lib/python3.11/site-packages/ciscoconfparse/ciscoconfparse.py in __init__(self, config, comment, debug, factory, linesplit_rgx, ignore_blank_lines, syntax, encoding, read_only)
+    753         if isinstance(config, (str, pathlib.Path,)):
+    754             if ignore_blank_lines is True and factory is False:
+--> 755                 tmp_lines = self.read_config_file(filepath=config, linesplit_rgx=r"\r*\n+")
+    756             else:
+    757                 tmp_lines = self.read_config_file(filepath=config, linesplit_rgx=r"\r*\n")
+
+~/VENV/py3_venv/lib/python3.11/site-packages/loguru/_logger.py in catch_wrapper(*args, **kwargs)
+   1275                     def catch_wrapper(*args, **kwargs):
+   1276                         with catcher:
+-> 1277                             return function(*args, **kwargs)
+   1278                         return default
+   1279 
+
+~/VENV/py3_venv/lib/python3.11/site-packages/ciscoconfparse/ciscoconfparse.py in read_config_file(self, filepath, linesplit_rgx)
+    858             error = f"Filepath: {filepath} does not exist"
+    859             logger.critical(error)
+--> 860             raise FileNotFoundError(error)
+    861 
+    862         config_lines = None
+
+FileNotFoundError: Filepath: 
+interface FastEthernet3
+ no ip address
+!
+interface FastEthernet4
+ description *** LAN connection (don't change) ***
+ ip address 10.220.88.20 255.255.255.0
+ duplex auto
+ speed auto
+  does not exist
+
+In [8]: CiscoConfParse(my_config.splitlines())
+Out[8]: <CiscoConfParse: 8 lines / syntax: ios / comment delimiter: '!' / factory: False / ignore_blank_lines: True / encoding: 'UTF-8'>
+
+In [9]: cisco_obj
+Out[9]: <CiscoConfParse: 245 lines / syntax: ios / comment delimiter: '!' / factory: False / ignore_blank_lines: True / encoding: 'UTF-8'>
+
+In [10]: dir(cisco_obj)
+Out[10]: 
+['ConfigObjs',
+ '__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getstate__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ '_find_all_child_OBJ',
+ '_find_line_OBJ',
+ '_find_sibling_OBJ',
+ '_objects_to_uncfg',
+ '_sequence_nonparent_lines',
+ '_sequence_parent_lines',
+ '_unique_OBJ',
+ 'append_line',
+ 'atomic',
+ 'check_ccp_input_good',
+ 'comment_delimiter',
+ 'commit',
+ 'debug',
+ 'delete_lines',
+ 'encoding',
+ 'factory',
+ 'find_all_children',
+ 'find_blocks',
+ 'find_child_objects',
+ 'find_children',
+ 'find_children_w_parents',
+ 'find_interface_objects',
+ 'find_lineage',
+ 'find_lines',
+ 'find_object_branches',
+ 'find_objects',
+ 'find_objects_dna',
+ 'find_objects_w_all_children',
+ 'find_objects_w_child',
+ 'find_objects_w_missing_children',
+ 'find_objects_w_parents',
+ 'find_objects_wo_child',
+ 'find_parent_objects',
+ 'find_parent_objects_wo_child',
+ 'find_parents_w_child',
+ 'find_parents_wo_child',
+ 'finished_config_parse',
+ 'handle_ccp_brace_syntax',
+ 'has_line_with',
+ 'ignore_blank_lines',
+ 'insert_after',
+ 'insert_after_child',
+ 'insert_before',
+ 'ioscfg',
+ 'objs',
+ 'openargs',
+ 'prepend_line',
+ 're_match_iter_typed',
+ 're_search_children',
+ 'read_config_file',
+ 'read_only',
+ 'replace_all_children',
+ 'replace_children',
+ 'replace_lines',
+ 'req_cfgspec_all_diff',
+ 'req_cfgspec_excl_diff',
+ 'save_as',
+ 'sync_diff',
+ 'syntax']
+
+In [11]: help(cisco_obj.find_objects)
+
+
+In [12]: cisco_obj.find_objects(r"^interface")
+Out[12]: 
+[<IOSCfgLine # 171 'interface FastEthernet0'>,
+ <IOSCfgLine # 174 'interface FastEthernet1'>,
+ <IOSCfgLine # 177 'interface FastEthernet2'>,
+ <IOSCfgLine # 180 'interface FastEthernet3'>,
+ <IOSCfgLine # 183 'interface FastEthernet4'>,
+ <IOSCfgLine # 189 'interface Vlan1'>]
+
+In [13]: intf = cisco_obj.find_objects(r"^interface")
+
+In [14]: intf[0]
+Out[14]: <IOSCfgLine # 171 'interface FastEthernet0'>
+
+In [15]: intf[0].txt
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+~/VENV/py3_venv/lib/python3.11/site-packages/ciscoconfparse/ccp_abc.py in __getattr__(self, attr)
+    137         try:
+--> 138             retval = getattr(object, attr)
+    139             return retval
+
+AttributeError: type object 'object' has no attribute 'txt'
+
+During handling of the above exception, another exception occurred:
+
+AttributeError                            Traceback (most recent call last)
+<ipython-input-15-a57e4b609f7e> in <module>
+----> 1 intf[0].txt
+
+~/VENV/py3_venv/lib/python3.11/site-packages/loguru/_logger.py in catch_wrapper(*args, **kwargs)
+   1275                     def catch_wrapper(*args, **kwargs):
+   1276                         with catcher:
+-> 1277                             return function(*args, **kwargs)
+   1278                         return default
+   1279 
+
+~/VENV/py3_venv/lib/python3.11/site-packages/ciscoconfparse/ccp_abc.py in __getattr__(self, attr)
+    141             error = f"The {attr} attribute does not exist"
+    142             logger.error(error)
+--> 143             raise AttributeError(error)
+    144 
+    145     # On BaseCfgLine()
+
+AttributeError: The txt attribute does not exist
+
+In [16]: intf[0].text
+Out[16]: 'interface FastEthernet0'
+
+In [17]: dir(intf[0])
+Out[17]: 
+['_VIRTUAL_INTF_REGEX',
+ '_VIRTUAL_INTF_REGEX_STR',
+ '__abstractmethods__',
+ '__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattr__',
+ '__getattribute__',
+ '__getstate__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ '_abc_impl',
+ '_diff_side',
+ '_diff_word',
+ '_line_id',
+ '_list_reassign_linenums',
+ '_text',
+ '_uncfgtext_to_be_deprecated',
+ 'add_child',
+ 'add_parent',
+ 'add_uncfgtext',
+ 'all_children',
+ 'all_parents',
+ 'all_text',
+ 'append_to_family',
+ 'as_diff_dict',
+ 'blank_line_keep',
+ 'build_reset_string',
+ 'calculate_line_id',
+ 'child_indent',
+ 'children',
+ 'classname',
+ 'comment_delimiter',
+ 'confobj',
+ 'delete',
+ 'delete_children_matching',
+ 'diff_id_list',
+ 'diff_linenum',
+ 'diff_rendered',
+ 'diff_side',
+ 'diff_word',
+ 'dna',
+ 'family_endpoint',
+ 'geneology',
+ 'geneology_text',
+ 'get_typed_dict',
+ 'has_child_with',
+ 'has_children',
+ 'hash_children',
+ 'indent',
+ 'index',
+ 'insert_after',
+ 'insert_before',
+ 'intf_in_portchannel',
+ 'ioscfg',
+ 'is_child',
+ 'is_comment',
+ 'is_config_line',
+ 'is_ethernet_intf',
+ 'is_intf',
+ 'is_loopback_intf',
+ 'is_object_for',
+ 'is_object_for_aaa_accounting',
+ 'is_object_for_aaa_authentication',
+ 'is_object_for_aaa_authorization',
+ 'is_object_for_hostname',
+ 'is_object_for_interface',
+ 'is_object_for_ip_route',
+ 'is_object_for_ipv6_route',
+ 'is_parent',
+ 'is_portchannel_intf',
+ 'is_subintf',
+ 'is_switchport',
+ 'is_virtual_intf',
+ 'line_id',
+ 'lineage',
+ 'linenum',
+ 'parent',
+ 'portchannel_number',
+ 're_match',
+ 're_match_iter_typed',
+ 're_match_typed',
+ 're_search',
+ 're_search_children',
+ 're_sub',
+ 'replace',
+ 'reset',
+ 'safe_escape_curly_braces',
+ 'set_comment_bool',
+ 'siblings',
+ 'text',
+ 'uncfgtext',
+ 'verbose']
+
+In [18]: intf[0].children
+Out[18]: [<IOSCfgLine # 172 ' no ip address' (parent is # 171)>]
+
+In [19]: intf[4]
+Out[19]: <IOSCfgLine # 183 'interface FastEthernet4'>
+
+In [20]: intf[4].children
+Out[20]: 
+[<IOSCfgLine # 184 ' description *** LAN connection (don't change) ***' (parent is # 183)>,
+ <IOSCfgLine # 185 ' ip address 10.220.88.20 255.255.255.0' (parent is # 183)>,
+ <IOSCfgLine # 186 ' duplex auto' (parent is # 183)>,
+ <IOSCfgLine # 187 ' speed auto' (parent is # 183)>]
+
+In [21]: for child in intf[4].children:
+    ...:     print(child.text)
+    ...: 
+ description *** LAN connection (don't change) ***
+ ip address 10.220.88.20 255.255.255.0
+ duplex auto
+ speed auto
+
+In [22]: intf[4].text
+Out[22]: 'interface FastEthernet4'
+
+In [23]: quit
+(py3_venv) [ponnathan@pylab36b lessons]$ 
+

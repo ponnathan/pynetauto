@@ -1,0 +1,126 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ ipython
+Python 3.11.6 (main, Oct  4 2023, 18:55:41) [GCC 11.4.1 20230605 (Red Hat 11.4.1-2)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.31.1 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: import xmltodict
+
+In [2]: f = open("show_ver2.xml")
+
+In [3]: xmldata = f.read().strip()
+
+In [4]: print(xmldate)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-4-a90a8648c7c3> in <module>
+----> 1 print(xmldate)
+
+NameError: name 'xmldate' is not defined
+
+In [5]: print(xmldata)
+<software-information>
+        <host-name>pynet-jnpr-srx1</host-name>
+        <product-model>srx100h2</product-model>
+        <product-name>srx100h2</product-name>
+        <product-name>srx100h3</product-name>
+        <jsr/>
+        <package-information>
+            <name>junos</name>
+            <comment>JUNOS Software Release [12.1X44-D35.5]</comment>
+        </package-information>
+    </software-information>
+
+In [6]: my_xml = xmltodict.parse(xmldata)
+
+In [7]: my_xml
+Out[7]: 
+OrderedDict([('software-information',
+              OrderedDict([('host-name', 'pynet-jnpr-srx1'),
+                           ('product-model', 'srx100h2'),
+                           ('product-name', ['srx100h2', 'srx100h3']),
+                           ('jsr', None),
+                           ('package-information',
+                            OrderedDict([('name', 'junos'),
+                                         ('comment',
+                                          'JUNOS Software Release [12.1X44-D35.5]')]))]))])
+
+In [8]: my_xml.keys()
+Out[8]: odict_keys(['software-information'])
+
+In [9]: my_xml['software-information']
+Out[9]: 
+OrderedDict([('host-name', 'pynet-jnpr-srx1'),
+             ('product-model', 'srx100h2'),
+             ('product-name', ['srx100h2', 'srx100h3']),
+             ('jsr', None),
+             ('package-information',
+              OrderedDict([('name', 'junos'),
+                           ('comment',
+                            'JUNOS Software Release [12.1X44-D35.5]')]))])
+
+In [10]: print(xmldata)
+<software-information>
+        <host-name>pynet-jnpr-srx1</host-name>
+        <product-model>srx100h2</product-model>
+        <product-name>srx100h2</product-name>
+        <product-name>srx100h3</product-name>
+        <jsr/>
+        <package-information>
+            <name>junos</name>
+            <comment>JUNOS Software Release [12.1X44-D35.5]</comment>
+        </package-information>
+    </software-information>
+
+In [11]: my_xml['software-information']
+Out[11]: 
+OrderedDict([('host-name', 'pynet-jnpr-srx1'),
+             ('product-model', 'srx100h2'),
+             ('product-name', ['srx100h2', 'srx100h3']),
+             ('jsr', None),
+             ('package-information',
+              OrderedDict([('name', 'junos'),
+                           ('comment',
+                            'JUNOS Software Release [12.1X44-D35.5]')]))])
+
+In [12]: my_xml['software-information'].keys()
+Out[12]: odict_keys(['host-name', 'product-model', 'product-name', 'jsr', 'package-information'])
+
+In [13]: my_xml['software-information']['product-name']
+Out[13]: ['srx100h2', 'srx100h3']
+
+In [14]: my_xml['software-information']['product-model']
+Out[14]: 'srx100h2'
+
+In [15]: my_xml['software-information']['product-name']
+Out[15]: ['srx100h2', 'srx100h3']
+
+In [16]: print(xmldata)
+<software-information>
+        <host-name>pynet-jnpr-srx1</host-name>
+        <product-model>srx100h2</product-model>
+        <product-name>srx100h2</product-name>
+        <product-name>srx100h3</product-name>
+        <jsr/>
+        <package-information>
+            <name>junos</name>
+            <comment>JUNOS Software Release [12.1X44-D35.5]</comment>
+        </package-information>
+    </software-information>
+
+In [17]: my_xml['software-information']['product-name']
+Out[17]: ['srx100h2', 'srx100h3']
+
+In [18]: my_xml = xmltodict.parse(xmldata, force_list={'product-model'}:True}
+  File "<ipython-input-18-8c82c426ccf2>", line 1
+    my_xml = xmltodict.parse(xmldata, force_list={'product-model'}:True}
+                                                                       ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '('
+
+
+In [19]: my_xml = xmltodict.parse(xmldata, force_list={'product-model': True})
+
+In [20]: my_xml['software-information']['product-model']
+Out[20]: ['srx100h2']
+
+In [21]: quit
+

@@ -1,0 +1,74 @@
+(py3_venv) [ponnathan@pylab36b class3]$ python class3_ex2b.py 
+Connected to arista1 at arista1.lasthop.io
+Arista vEOS-lab
+Hardware version: 
+Serial number: 
+Hardware MAC address: 00aa.fc05.b513
+System MAC address: 00aa.fc05.b513
+
+Software image version: 4.28.0F
+Architecture: i686
+Internal build version: 4.28.0F-26924507.4280F
+Internal build ID: a2df8007-1f3a-4b15-b7d2-b74f9ee07c71
+Image format version: 1.0
+Image optimization: None
+
+Uptime: 82 weeks, 1 day, 8 hours and 38 minutes
+Total memory: 4000292 kB
+Free memory: 3101420 kB
+
+Connected to arista2 at arista2.lasthop.io
+Arista vEOS-lab
+Hardware version: 
+Serial number: 
+Hardware MAC address: 00af.fc9a.e49e
+System MAC address: 00af.fc9a.e49e
+
+Software image version: 4.28.0F
+Architecture: i686
+Internal build version: 4.28.0F-26924507.4280F
+Internal build ID: a2df8007-1f3a-4b15-b7d2-b74f9ee07c71
+Image format version: 1.0
+Image optimization: None
+
+Uptime: 82 weeks, 1 day, 8 hours and 36 minutes
+Total memory: 4000292 kB
+Free memory: 3113892 kB
+
+Connected to arista3 at arista3.lasthop.io
+Arista vEOS-lab
+Hardware version: 
+Serial number: 
+Hardware MAC address: 00ab.fcc0.f97c
+System MAC address: 00ab.fcc0.f97c
+
+Software image version: 4.28.0F
+Architecture: i686
+Internal build version: 4.28.0F-26924507.4280F
+Internal build ID: a2df8007-1f3a-4b15-b7d2-b74f9ee07c71
+Image format version: 1.0
+Image optimization: None
+
+Uptime: 82 weeks, 1 day, 8 hours and 34 minutes
+Total memory: 4000292 kB
+Free memory: 3106700 kB
+
+Connected to arista4 at arista4.lasthop.io
+Arista vEOS-lab
+Hardware version: 
+Serial number: 
+Hardware MAC address: 00ac.fc59.97f2
+System MAC address: 00ac.fc59.97f2
+
+Software image version: 4.28.0F
+Architecture: i686
+Internal build version: 4.28.0F-26924507.4280F
+Internal build ID: a2df8007-1f3a-4b15-b7d2-b74f9ee07c71
+Image format version: 1.0
+Image optimization: None
+
+Uptime: 82 weeks, 1 day, 8 hours and 32 minutes
+Total memory: 4000292 kB
+Free memory: 3112672 kB
+
+

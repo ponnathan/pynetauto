@@ -1,0 +1,95 @@
+(py3_venv) [ponnathan@pylab36b class9]$ python class9_ex2.py 
+Password: 
+
+
+
+Print arp table of all devices
+--------------------
+------
+[{'age': 5.0,
+  'interface': 'GigabitEthernet0/0/0',
+  'ip': '10.220.88.1',
+  'mac': '00:24:C4:E9:48:AE'},
+ {'age': 210.0,
+  'interface': 'GigabitEthernet0/0/0',
+  'ip': '10.220.88.20',
+  'mac': 'C8:9C:1D:EA:0E:B6'},
+ {'age': -1.0,
+  'interface': 'GigabitEthernet0/0/0',
+  'ip': '10.220.88.22',
+  'mac': 'A0:93:51:41:B7:80'},
+ {'age': 111.0,
+  'interface': 'GigabitEthernet0/0/0',
+  'ip': '10.220.88.23',
+  'mac': '50:2F:A8:B1:69:00'},
+ {'age': 196.0,
+  'interface': 'GigabitEthernet0/0/0',
+  'ip': '10.220.88.28',
+  'mac': '00:AA:FC:05:B5:13'},
+ {'age': 158.0,
+  'interface': 'GigabitEthernet0/0/0',
+  'ip': '10.220.88.31',
+  'mac': '00:AC:FC:59:97:F2'},
+ {'age': 151.0,
+  'interface': 'GigabitEthernet0/0/0',
+  'ip': '10.220.88.37',
+  'mac': '00:01:00:FF:00:01'},
+ {'age': 24.0,
+  'interface': 'GigabitEthernet0/0/0',
+  'ip': '10.220.88.38',
+  'mac': '00:02:00:FF:00:01'}]
+------
+------
+[{'age': 0.0,
+  'interface': 'Vlan1, Ethernet1',
+  'ip': '10.220.88.1',
+  'mac': '00:24:C4:E9:48:AE'},
+ {'age': 7753.0,
+  'interface': 'Vlan1, not learned',
+  'ip': '10.220.88.20',
+  'mac': 'C8:9C:1D:EA:0E:B6'},
+ {'age': 6601.0,
+  'interface': 'Vlan1, not learned',
+  'ip': '10.220.88.21',
+  'mac': '1C:6A:7A:AF:57:6C'},
+ {'age': 11785.0,
+  'interface': 'Vlan1, not learned',
+  'ip': '10.220.88.22',
+  'mac': 'A0:93:51:41:B7:80'},
+ {'age': 11497.0,
+  'interface': 'Vlan1, not learned',
+  'ip': '10.220.88.23',
+  'mac': '50:2F:A8:B1:69:00'},
+ {'age': 551.0,
+  'interface': 'Vlan1, not learned',
+  'ip': '10.220.88.29',
+  'mac': '00:AF:FC:9A:E4:9E'},
+ {'age': 1704.0,
+  'interface': 'Vlan1, not learned',
+  'ip': '10.220.88.30',
+  'mac': '00:AB:FC:C0:F9:7C'},
+ {'age': 1416.0,
+  'interface': 'Vlan1, not learned',
+  'ip': '10.220.88.31',
+  'mac': '00:AC:FC:59:97:F2'}]
+------
+
+
+
+Print NTP peers if available
+--------------------
+------
+{'130.126.24.24': {}, '152.2.21.1': {}}
+------
+------
+NTP Peers Getter not implemented for device type eos
+------
+
+
+
+Capture and write backups to disk
+--------------------
+
+
+
+

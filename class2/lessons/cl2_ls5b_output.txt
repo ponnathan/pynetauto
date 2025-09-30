@@ -1,0 +1,7 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl2_ls5b.py
+Password:
+{'file_exists': True, 'file_transferred': True, 'file_verified': True}
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl2_ls5b.py
+Password:
+{'file_exists': True, 'file_transferred': False, 'file_verified': True}
+(py3_venv) [ponnathan@pylab36b lessons]$

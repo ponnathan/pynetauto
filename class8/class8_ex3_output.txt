@@ -1,0 +1,18 @@
+(py3_venv) [ponnathan@pylab36b class8]$ python class8_ex3.py 
+Password: 
+
+Device is already locked.
+
+Check diff of staged-config vs running-config
+--------------------
+
+[edit system]
+-  host-name srx2;
++  host-name python4life;
+
+
+Check diff of staged-config vs running-config
+--------------------
+None
+
+

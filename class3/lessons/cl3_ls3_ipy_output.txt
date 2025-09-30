@@ -1,0 +1,66 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ ipython -i cl3_ls3.py 
+Python 3.11.6 (main, Oct  4 2023, 18:55:41) [GCC 11.4.1 20230605 (Red Hat 11.4.1-2)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.31.1 -- An enhanced Interactive Python. Type '?' for help.
+Enter filename: test1.yml
+['router1', 'router2', 'router3', 'router4']
+
+In [1]: dir()
+Out[1]: 
+['In',
+ 'Out',
+ '_',
+ '__',
+ '___',
+ '__builtin__',
+ '__builtins__',
+ '__doc__',
+ '__loader__',
+ '__name__',
+ '__package__',
+ '__spec__',
+ '_dh',
+ '_i',
+ '_i1',
+ '_ih',
+ '_ii',
+ '_iii',
+ '_oh',
+ 'exit',
+ 'f',
+ 'filename',
+ 'get_ipython',
+ 'quit',
+ 'yaml',
+ 'yaml_out']
+
+In [2]: yaml_out
+Out[2]: ['router1', 'router2', 'router3', 'router4']
+
+In [3]: yaml[0]
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-3-9c92a2769071> in <module>
+----> 1 yaml[0]
+
+TypeError: 'module' object is not subscriptable
+
+In [4]: yaml_out[0]
+Out[4]: 'router1'
+
+In [5]: yaml_out[1]
+Out[5]: 'router2'
+
+In [6]: yaml_out[2]
+Out[6]: 'router3'
+
+In [7]: yaml_out[3]
+Out[7]: 'router4'
+
+In [8]: 
+
+In [8]: type(yaml_out)
+Out[8]: list
+
+In [9]: 
+

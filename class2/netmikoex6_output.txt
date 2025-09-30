@@ -1,0 +1,18 @@
+(py3_venv) [ponnathan@pylab36b class2]$ python netmikoex6.py
+Password:
+
+Current Prompt:
+cisco4#
+
+Enter Config Mode, Current Prompt:
+cisco4(config)#
+
+Exit Config Mode, Current Prompt:
+cisco4#
+
+Exit privileged exec (disable), Current Prompt:
+disable
+cisco4>
+
+Re-enter enable mode, Current Prompt:
+cisco4#

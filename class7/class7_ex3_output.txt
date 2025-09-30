@@ -1,0 +1,22 @@
+(py3_venv) [ponnathan@pylab36b class7]$ python class7_ex3.py 
+
+
+
+Type of 'zones-security' in the first XML file:
+--------------------
+<class 'list'>
+
+
+
+Type of 'zones-security' in the single-zone XML file:
+--------------------
+<class 'collections.OrderedDict'>
+
+
+
+Type of 'zones-security' in the single-zone XML file using force_list:
+--------------------
+<class 'list'>
+
+
+

@@ -1,0 +1,15 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl2_ls6.py
+Password:
+cisco1#
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+cisco1(config)#logging buffered 10000
+cisco1(config)#no logging console
+cisco1(config)#clock timezone PST -8 0
+cisco1(config)#end
+cisco1#
+write mem
+Building configuration...
+[OK]
+cisco1#
+(py3_venv) [ponnathan@pylab36b lessons]$

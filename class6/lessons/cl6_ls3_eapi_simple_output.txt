@@ -1,0 +1,25 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl6_ls3_eapi_simple.py 
+Password: 
+
+{'id': '1',
+ 'jsonrpc': '2.0',
+ 'result': [{'architecture': 'i686',
+             'bootupTimestamp': 1709134820.186605,
+             'configMacAddress': '00:00:00:00:00:00',
+             'hardwareRevision': '',
+             'hwMacAddress': '00:00:00:00:00:00',
+             'imageFormatVersion': '1.0',
+             'imageOptimization': 'None',
+             'internalBuildId': 'a2df8007-1f3a-4b15-b7d2-b74f9ee07c71',
+             'internalVersion': '4.28.0F-26924507.4280F',
+             'isIntlVersion': False,
+             'memFree': 3119000,
+             'memTotal': 4000292,
+             'mfgName': 'Arista',
+             'modelName': 'vEOS-lab',
+             'serialNumber': '',
+             'systemMacAddress': '00:aa:87:7d:c6:e5',
+             'uptime': 49976438.53,
+             'version': '4.28.0F'}]}
+
+

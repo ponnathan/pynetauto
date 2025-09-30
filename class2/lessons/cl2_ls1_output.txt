@@ -1,0 +1,8 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python test_class2.py
+Password:
+cisco1#
+delete flash:/test2.txt
+Delete filename [test2.txt]?
+Delete flash:/test2.txt? [confirm]y
+cisco1#
+cisco1#

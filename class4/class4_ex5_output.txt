@@ -1,0 +1,63 @@
+(py3_venv) [ponnathan@pylab36b class4]$ python textfsm.py class4_ex5.template class4_ex5.txt
+FSM Template:
+Value DEVICE_ID (\S+)
+Value LOCAL_INTF (\S+)
+Value CAPABILITY (\w+)
+Value REMOTE_PORT (\S+)
+
+Start
+  ^Device ID.*Port ID -> LLDPList
+
+LLDPList
+  ^${DEVICE_ID}\s+${LOCAL_INTF}\s+\d+\s+${CAPABILITY}\s+${REMOTE_PORT} -> Record
+
+
+State Transition > : LLDPList
+
+Assign Var > : DEVICE_ID
+
+Assign Var > : LOCAL_INTF
+
+Assign Var > : CAPABILITY
+
+Assign Var > : REMOTE_PORT
+
+RECORD > : ['nxos2.twb-tech.com', 'Eth2/1', 'BR', 'Eth2/1']
+
+Assign Var > : DEVICE_ID
+
+Assign Var > : LOCAL_INTF
+
+Assign Var > : CAPABILITY
+
+Assign Var > : REMOTE_PORT
+
+RECORD > : ['nxos2.twb-tech.com', 'Eth2/2', 'BR', 'Eth2/2']
+
+Assign Var > : DEVICE_ID
+
+Assign Var > : LOCAL_INTF
+
+Assign Var > : CAPABILITY
+
+Assign Var > : REMOTE_PORT
+
+RECORD > : ['nxos2.twb-tech.com', 'Eth2/3', 'BR', 'Eth2/3']
+
+Assign Var > : DEVICE_ID
+
+Assign Var > : LOCAL_INTF
+
+Assign Var > : CAPABILITY
+
+Assign Var > : REMOTE_PORT
+
+RECORD > : ['nxos2.twb-tech.com', 'Eth2/4', 'BR', 'Eth2/4']
+
+FSM Table:
+['DEVICE_ID', 'LOCAL_INTF', 'CAPABILITY', 'REMOTE_PORT']
+['nxos2.twb-tech.com', 'Eth2/1', 'BR', 'Eth2/1']
+['nxos2.twb-tech.com', 'Eth2/2', 'BR', 'Eth2/2']
+['nxos2.twb-tech.com', 'Eth2/3', 'BR', 'Eth2/3']
+['nxos2.twb-tech.com', 'Eth2/4', 'BR', 'Eth2/4']
+

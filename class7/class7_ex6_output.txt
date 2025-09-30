@@ -1,0 +1,12 @@
+(py3_venv) [ponnathan@pylab36b class7]$ python class7_ex6.py 
+Password: 
+
+
+
+Gather and print Ethernet1/1 data:
+--------------------
+Interface: Ethernet1/1; State: up; MTU: 1500
+
+
+
+

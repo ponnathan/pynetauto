@@ -1,0 +1,258 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ ipython -i cl8_ls5_jnpr_tables.py 
+Python 3.11.6 (main, Oct  4 2023, 18:55:41) [GCC 11.4.1 20230605 (Red Hat 11.4.1-2)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.31.1 -- An enhanced Interactive Python. Type '?' for help.
+Password: 
+
+In [1]: arp_entries
+Out[1]: ArpTable:srx2.lasthop.io: 3 items
+
+In [2]: dir(arp_entries)
+Out[2]: 
+['D',
+ 'GET_ARGS',
+ 'GET_RPC',
+ 'ITEM_NAME_XPATH',
+ 'ITEM_XPATH',
+ 'RPC',
+ 'USE_FILTER',
+ 'VIEW',
+ '__call__',
+ '__class__',
+ '__contains__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__getstate__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__iter__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ '_assert_data',
+ '_clearkeys',
+ '_dev',
+ '_key_list',
+ '_keys',
+ '_keys_composite',
+ '_keys_simple',
+ '_keyspec',
+ '_lxml',
+ '_path',
+ '_tkey',
+ '_use_filter',
+ '_view',
+ 'get',
+ 'hostname',
+ 'is_container',
+ 'items',
+ 'key_list',
+ 'keys',
+ 'savexml',
+ 'to_json',
+ 'values',
+ 'view',
+ 'xml']
+
+In [3]: help(arp_entries)
+
+
+In [4]: 
+
+In [4]: arp_entries.keys()
+Out[4]: ['00:24:c4:e9:48:ae', 'c8:9c:1d:ea:0e:b6', '50:2f:a8:b1:69:00']
+
+In [5]: arp_entries['00:24:c4:e9:48:ae']
+Out[5]: ArpView:00:24:c4:e9:48:ae
+
+In [6]: dir(arp_entries)
+Out[6]: 
+['D',
+ 'GET_ARGS',
+ 'GET_RPC',
+ 'ITEM_NAME_XPATH',
+ 'ITEM_XPATH',
+ 'RPC',
+ 'USE_FILTER',
+ 'VIEW',
+ '__call__',
+ '__class__',
+ '__contains__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__getstate__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__iter__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ '_assert_data',
+ '_clearkeys',
+ '_dev',
+ '_key_list',
+ '_keys',
+ '_keys_composite',
+ '_keys_simple',
+ '_keyspec',
+ '_lxml',
+ '_path',
+ '_tkey',
+ '_use_filter',
+ '_view',
+ 'get',
+ 'hostname',
+ 'is_container',
+ 'items',
+ 'key_list',
+ 'keys',
+ 'savexml',
+ 'to_json',
+ 'values',
+ 'view',
+ 'xml']
+
+In [7]: arp_entries['00:24:c4:e9:48:ae'].keys()
+Out[7]: dict_keys(['mac_address', 'ip_address', 'interface_name'])
+
+In [8]: arp_entries['00:24:c4:e9:48:ae']['ip_address']
+Out[8]: '10.220.88.1'
+
+In [9]: dir(arp_entries)
+Out[9]: 
+['D',
+ 'GET_ARGS',
+ 'GET_RPC',
+ 'ITEM_NAME_XPATH',
+ 'ITEM_XPATH',
+ 'RPC',
+ 'USE_FILTER',
+ 'VIEW',
+ '__call__',
+ '__class__',
+ '__contains__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__getstate__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__iter__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ '_assert_data',
+ '_clearkeys',
+ '_dev',
+ '_key_list',
+ '_keys',
+ '_keys_composite',
+ '_keys_simple',
+ '_keyspec',
+ '_lxml',
+ '_path',
+ '_tkey',
+ '_use_filter',
+ '_view',
+ 'get',
+ 'hostname',
+ 'is_container',
+ 'items',
+ 'key_list',
+ 'keys',
+ 'savexml',
+ 'to_json',
+ 'values',
+ 'view',
+ 'xml']
+
+In [10]: arp_entries.items()
+Out[10]: 
+[('00:24:c4:e9:48:ae',
+  [('mac_address', '00:24:c4:e9:48:ae'),
+   ('ip_address', '10.220.88.1'),
+   ('interface_name', 'vlan.0')]),
+ ('c8:9c:1d:ea:0e:b6',
+  [('mac_address', 'c8:9c:1d:ea:0e:b6'),
+   ('ip_address', '10.220.88.20'),
+   ('interface_name', 'vlan.0')]),
+ ('50:2f:a8:b1:69:00',
+  [('mac_address', '50:2f:a8:b1:69:00'),
+   ('ip_address', '10.220.88.23'),
+   ('interface_name', 'vlan.0')])]
+
+In [11]: for x in arp_entries.items():
+    ...:     print(x)
+    ...:     break
+    ...: 
+('00:24:c4:e9:48:ae', [('mac_address', '00:24:c4:e9:48:ae'), ('ip_address', '10.220.88.1'), ('interface_name', 'vlan.0')])
+
+In [12]: for x in arp_entries.items():
+    ...:     print(x)
+    ...: 
+('00:24:c4:e9:48:ae', [('mac_address', '00:24:c4:e9:48:ae'), ('ip_address', '10.220.88.1'), ('interface_name', 'vlan.0')])
+('c8:9c:1d:ea:0e:b6', [('mac_address', 'c8:9c:1d:ea:0e:b6'), ('ip_address', '10.220.88.20'), ('interface_name', 'vlan.0')])
+('50:2f:a8:b1:69:00', [('mac_address', '50:2f:a8:b1:69:00'), ('ip_address', '10.220.88.23'), ('interface_name', 'vlan.0')])
+
+In [13]: quit()
+(py3_venv) [ponnathan@pylab36b lessons]$ 
+

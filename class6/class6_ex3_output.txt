@@ -1,0 +1,19 @@
+(py3_venv) [ponnathan@pylab36b class6]$ python class6_ex3.py 
+Password: 
+
+
+10.220.88.0/24
+------------
+connected
+>>>>>>
+Vlan1
+------------
+
+0.0.0.0/0
+------------
+static
+>>>>>>
+Vlan1
+10.220.88.1
+------------
+

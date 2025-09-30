@@ -1,0 +1,32 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl2_ls7a.py 
+Password: 
+cisco1#
+(py3_venv) [ponnathan@pylab36b lessons]$ netstat -an | grep 23
+tcp        0      0 172.30.0.153:22         98.207.79.34:52239      ESTABLISHED
+tcp        0      0 172.30.0.153:47810      184.105.247.70:23       TIME_WAIT  
+udp        0      0 127.0.0.1:323           0.0.0.0:*                          
+udp6       0      0 ::1:323                 :::*                               
+unix  2      [ ACC ]     STREAM     LISTENING     578230   /run/user/1005/bus
+unix  2      [ ]         DGRAM      CONNECTED     16923    
+unix  3      [ ]         STREAM     CONNECTED     17023    
+unix  2      [ ACC ]     STREAM     LISTENING     16232    /var/run/lsm/ipc/sim
+unix  2      [ ACC ]     STREAM     LISTENING     16233    /var/run/lsm/ipc/simc
+unix  2      [ ]         DGRAM      CONNECTED     16238    
+unix  3      [ ]         STREAM     CONNECTED     16123    
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl2_ls7a.py 
+Password: 
+cisco1#
+(py3_venv) [ponnathan@pylab36b lessons]$ netstat -an | grep 23
+tcp        0      0 172.30.0.153:34754      184.105.247.70:23       TIME_WAIT  
+tcp        0      0 172.30.0.153:22         98.207.79.34:52239      ESTABLISHED
+udp        0      0 127.0.0.1:323           0.0.0.0:*                          
+udp6       0      0 ::1:323                 :::*                               
+unix  2      [ ACC ]     STREAM     LISTENING     578230   /run/user/1005/bus
+unix  2      [ ]         DGRAM      CONNECTED     16923    
+unix  3      [ ]         STREAM     CONNECTED     17023    
+unix  2      [ ACC ]     STREAM     LISTENING     16232    /var/run/lsm/ipc/sim
+unix  2      [ ACC ]     STREAM     LISTENING     16233    /var/run/lsm/ipc/simc
+unix  2      [ ]         DGRAM      CONNECTED     16238    
+unix  3      [ ]         STREAM     CONNECTED     16123    
+(py3_venv) [ponnathan@pylab36b lessons]$ 
+

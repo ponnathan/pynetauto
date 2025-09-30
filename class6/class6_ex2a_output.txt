@@ -1,0 +1,28 @@
+(py3_venv) [ponnathan@pylab36b class6]$ python class6_ex1.py 
+Password: 
+
+----------------------------------------
+  10.220.88.1   --> 0024.c4e9.48ae 
+ 10.220.88.20   --> c89c.1dea.0eb6 
+----------------------------------------
+
+(py3_venv) [ponnathan@pylab36b class6]$ vi class6_ex1_output.txt
+(py3_venv) [ponnathan@pylab36b class6]$ python class6_ex2a.py 
+python: can't open file '/home/ponnathan/GIT/netmiko/class6/class6_ex2a.py': [Errno 2] No such file or directory
+(py3_venv) [ponnathan@pylab36b class6]$ vi class6_ex2a.py
+(py3_venv) [ponnathan@pylab36b class6]$ python class6_ex2a.py 
+Password: 
+
+----------------------------------------
+  10.220.88.1   --> 0024.c4e9.48ae 
+ 10.220.88.20   --> c89c.1dea.0eb6 
+ 10.220.88.22   --> a093.5141.b780 
+ 10.220.88.23   --> 502f.a8b1.6900 
+ 10.220.88.28   --> 00aa.fc05.b513 
+ 10.220.88.29   --> 00af.fc9a.e49e 
+ 10.220.88.30   --> 00ab.fcc0.f97c 
+ 10.220.88.37   --> 0001.00ff.0001 
+ 10.220.88.38   --> 0002.00ff.0001 
+----------------------------------------
+
+

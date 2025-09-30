@@ -1,0 +1,36 @@
+(py3_venv) [ponnathan@pylab36b class4]$ python textfsm.py show_inter_status.template show_inter_status.txt 
+FSM Template:
+Value PORT_NAME (\S+)
+
+Start
+  ^\s*Port\s+Name\s+Status.* -> Interfaces
+
+Interfaces
+  ^\s*${PORT_NAME}\s+.* -> Record
+
+
+State Transition > : Interfaces
+
+Assign Var > : PORT_NAME
+
+RECORD > : ['Gi0/1/0']
+
+Assign Var > : PORT_NAME
+
+RECORD > : ['Gi0/1/1']
+
+Assign Var > : PORT_NAME
+
+RECORD > : ['Gi0/1/2']
+
+Assign Var > : PORT_NAME
+
+RECORD > : ['Gi0/1/3']
+
+FSM Table:
+['PORT_NAME']
+['Gi0/1/0']
+['Gi0/1/1']
+['Gi0/1/2']
+['Gi0/1/3']
+

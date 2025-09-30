@@ -1,0 +1,5 @@
+(py3_venv) [ponnathan@pylab36b class3]$ python class3_ex5.py 
+
+cisco3#
+
+

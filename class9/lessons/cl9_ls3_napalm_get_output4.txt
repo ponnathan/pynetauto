@@ -1,0 +1,15 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl9_ls3_napalm_get.py 
+Password: 
+
+
+
+>>>Test device open
+
+{'Ethernet2': [{'hostname': 'arista2', 'port': 'Ethernet2'}],
+ 'Ethernet3': [{'hostname': 'arista2', 'port': 'Ethernet3'}],
+ 'Ethernet4': [{'hostname': 'arista2', 'port': 'Ethernet4'}],
+ 'Ethernet5': [{'hostname': 'arista2', 'port': 'Ethernet5'}],
+ 'Ethernet6': [{'hostname': 'arista2', 'port': 'Ethernet6'}],
+ 'Ethernet7': [{'hostname': 'arista2', 'port': 'Ethernet7'}]}
+
+

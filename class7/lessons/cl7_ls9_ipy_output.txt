@@ -1,0 +1,284 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ ipython
+Python 3.11.6 (main, Oct  4 2023, 18:55:41) [GCC 11.4.1 20230605 (Red Hat 11.4.1-2)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.31.1 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: a = """
+   ...: <rpc-reply xmlns:junos="http://xml.juniper.net/junos/12.1X44/junos">
+   ...:     <software-information>
+   ...:         <host-name>pynet-jnpr-srx1</host-name>
+   ...:         <product-model>srx100h2</product-model>
+   ...:         <product-name>srx100h2</product-name>
+   ...:         <jsr/>
+   ...:         <package-information>
+   ...:             <name>junos</name>
+   ...:             <comment>JUNOS Software Release [12.1X44-D35.5]</comment>
+   ...:         </package-information>
+   ...:     </software-information>
+   ...:     <cli>
+   ...:         <banner/>
+   ...:     </cli>
+   ...: </rpc-reply>
+   ...: """
+
+In [2]: from lxml import etree
+
+In [3]: my_xml = etree.formatstring(a)
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-3-607e5acbe611> in <module>
+----> 1 my_xml = etree.formatstring(a)
+
+AttributeError: module 'lxml.etree' has no attribute 'formatstring'
+
+In [4]: my_xml = etree.fromstring(a)
+
+In [5]: my_xml
+Out[5]: <Element rpc-reply at 0x7efde3569680>
+
+In [6]: my_xml.tag
+Out[6]: 'rpc-reply'
+
+In [7]: etree.tostring(my_xml)
+Out[7]: b'<rpc-reply xmlns:junos="http://xml.juniper.net/junos/12.1X44/junos">\n    <software-information>\n        <host-name>pynet-jnpr-srx1</host-name>\n        <product-model>srx100h2</product-model>\n        <product-name>srx100h2</product-name>\n        <jsr/>\n        <package-information>\n            <name>junos</name>\n            <comment>JUNOS Software Release [12.1X44-D35.5]</comment>\n        </package-information>\n    </software-information>\n    <cli>\n        <banner/>\n    </cli>\n</rpc-reply>'
+
+In [8]: etree.tostring(my_xml).decode()
+Out[8]: '<rpc-reply xmlns:junos="http://xml.juniper.net/junos/12.1X44/junos">\n    <software-information>\n        <host-name>pynet-jnpr-srx1</host-name>\n        <product-model>srx100h2</product-model>\n        <product-name>srx100h2</product-name>\n        <jsr/>\n        <package-information>\n            <name>junos</name>\n            <comment>JUNOS Software Release [12.1X44-D35.5]</comment>\n        </package-information>\n    </software-information>\n    <cli>\n        <banner/>\n    </cli>\n</rpc-reply>'
+
+In [9]: print(etree.tostring(my_xml).decode())
+<rpc-reply xmlns:junos="http://xml.juniper.net/junos/12.1X44/junos">
+    <software-information>
+        <host-name>pynet-jnpr-srx1</host-name>
+        <product-model>srx100h2</product-model>
+        <product-name>srx100h2</product-name>
+        <jsr/>
+        <package-information>
+            <name>junos</name>
+            <comment>JUNOS Software Release [12.1X44-D35.5]</comment>
+        </package-information>
+    </software-information>
+    <cli>
+        <banner/>
+    </cli>
+</rpc-reply>
+
+In [10]: my_xml.tag
+Out[10]: 'rpc-reply'
+
+In [11]: my_xml.getchildren()
+Out[11]: 
+[<Element software-information at 0x7efde4361300>,
+ <Element cli at 0x7efde2999040>]
+
+In [12]: my_xml
+Out[12]: <Element rpc-reply at 0x7efde3569680>
+
+In [13]: print(etree.tostring(my_xml).decode())
+<rpc-reply xmlns:junos="http://xml.juniper.net/junos/12.1X44/junos">
+    <software-information>
+        <host-name>pynet-jnpr-srx1</host-name>
+        <product-model>srx100h2</product-model>
+        <product-name>srx100h2</product-name>
+        <jsr/>
+        <package-information>
+            <name>junos</name>
+            <comment>JUNOS Software Release [12.1X44-D35.5]</comment>
+        </package-information>
+    </software-information>
+    <cli>
+        <banner/>
+    </cli>
+</rpc-reply>
+
+In [14]: my_xml.getchildren()
+Out[14]: 
+[<Element software-information at 0x7efde4361300>,
+ <Element cli at 0x7efde2999040>]
+
+In [15]: my_xml[0]
+Out[15]: <Element software-information at 0x7efde4361300>
+
+In [16]: my_xml[1]
+Out[16]: <Element cli at 0x7efde2999040>
+
+In [17]: my_xml.getchildren()
+Out[17]: 
+[<Element software-information at 0x7efde4361300>,
+ <Element cli at 0x7efde2999040>]
+
+In [18]: my_xml.getchildren()[0]
+Out[18]: <Element software-information at 0x7efde4361300>
+
+In [19]: my_xml.getchildren()[0].getchildren()
+Out[19]: 
+[<Element host-name at 0x7efde3751280>,
+ <Element product-model at 0x7efde3752580>,
+ <Element product-name at 0x7efde37516c0>,
+ <Element jsr at 0x7efde3751580>,
+ <Element package-information at 0x7efde3753840>]
+
+In [20]: print(etree.tostring(my_xml).decode())
+<rpc-reply xmlns:junos="http://xml.juniper.net/junos/12.1X44/junos">
+    <software-information>
+        <host-name>pynet-jnpr-srx1</host-name>
+        <product-model>srx100h2</product-model>
+        <product-name>srx100h2</product-name>
+        <jsr/>
+        <package-information>
+            <name>junos</name>
+            <comment>JUNOS Software Release [12.1X44-D35.5]</comment>
+        </package-information>
+    </software-information>
+    <cli>
+        <banner/>
+    </cli>
+</rpc-reply>
+
+In [21]: my_xml.getchildren()[0].getchildren()
+Out[21]: 
+[<Element host-name at 0x7efde3751280>,
+ <Element product-model at 0x7efde3752580>,
+ <Element product-name at 0x7efde37516c0>,
+ <Element jsr at 0x7efde3751580>,
+ <Element package-information at 0x7efde3753840>]
+
+In [22]: my_xml[0]
+Out[22]: <Element software-information at 0x7efde4361300>
+
+In [23]: my_xml[0][0]
+Out[23]: <Element host-name at 0x7efde3751280>
+
+In [24]: my_xml[0][1]
+Out[24]: <Element product-model at 0x7efde3752580>
+
+In [25]: my_xml[0][2]
+Out[25]: <Element product-name at 0x7efde37516c0>
+
+In [26]: my_xml[0][3]
+Out[26]: <Element jsr at 0x7efde3751580>
+
+In [27]: for child in my_xml:
+    ...:     print(child)
+    ...: 
+<Element software-information at 0x7efde4361300>
+<Element cli at 0x7efde2999040>
+
+In [28]: for child in my_xml:
+    ...:     print(child.tag)
+    ...: 
+    ...: 
+software-information
+cli
+
+In [29]: dir(my_xml)
+Out[29]: 
+['__bool__',
+ '__class__',
+ '__contains__',
+ '__copy__',
+ '__deepcopy__',
+ '__delattr__',
+ '__delitem__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__getstate__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__iter__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__reversed__',
+ '__setattr__',
+ '__setitem__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '_init',
+ 'addnext',
+ 'addprevious',
+ 'append',
+ 'attrib',
+ 'base',
+ 'clear',
+ 'cssselect',
+ 'extend',
+ 'find',
+ 'findall',
+ 'findtext',
+ 'get',
+ 'getchildren',
+ 'getiterator',
+ 'getnext',
+ 'getparent',
+ 'getprevious',
+ 'getroottree',
+ 'index',
+ 'insert',
+ 'items',
+ 'iter',
+ 'iterancestors',
+ 'iterchildren',
+ 'iterdescendants',
+ 'iterfind',
+ 'itersiblings',
+ 'itertext',
+ 'keys',
+ 'makeelement',
+ 'nsmap',
+ 'prefix',
+ 'remove',
+ 'replace',
+ 'set',
+ 'sourceline',
+ 'tag',
+ 'tail',
+ 'text',
+ 'values',
+ 'xpath']
+
+In [30]: for child in my_xml.iterdescendants():
+    ...:     print(child)
+    ...: 
+<Element software-information at 0x7efde4361300>
+<Element host-name at 0x7efde3751280>
+<Element product-model at 0x7efde3752580>
+<Element product-name at 0x7efde37516c0>
+<Element jsr at 0x7efde3751580>
+<Element package-information at 0x7efde3753840>
+<Element name at 0x7efde29f4980>
+<Element comment at 0x7efde4384c40>
+<Element cli at 0x7efde2999040>
+<Element banner at 0x7efde2a3cb80>
+
+In [31]: print(etree.tostring(my_xml).decode())
+<rpc-reply xmlns:junos="http://xml.juniper.net/junos/12.1X44/junos">
+    <software-information>
+        <host-name>pynet-jnpr-srx1</host-name>
+        <product-model>srx100h2</product-model>
+        <product-name>srx100h2</product-name>
+        <jsr/>
+        <package-information>
+            <name>junos</name>
+            <comment>JUNOS Software Release [12.1X44-D35.5]</comment>
+        </package-information>
+    </software-information>
+    <cli>
+        <banner/>
+    </cli>
+</rpc-reply>
+
+In [32]: quit
+

@@ -1,0 +1,3 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl7_ls14_test1_jsonrpc.py 
+Password: 
+{'hostname': 'nxos1.lasthop.io'}

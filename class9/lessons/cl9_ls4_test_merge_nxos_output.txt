@@ -1,0 +1,133 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl9_ls4_test_merge_nxos.py 
+Password: 
+
+>>>Test device open
+Hit enter to continue: 
+
+>>>Load config change (merge) - no commit
+
+> /home/ponnathan/GIT/netmiko/class9/lessons/cl9_ls4_test_merge_nxos.py(41)<module>()
+     40     ipdb.set_trace()
+---> 41     hit_enter()
+     42 
+
+ipdb> list
+     36     device.load_merge_candidate(filename="nxos-merge.conf")
+     37     print(device.compare_config())
+     38     import ipdb
+     39 
+     40     ipdb.set_trace()
+---> 41     hit_enter()
+     42 
+     43     print()
+     44     print(">>>Discard config change (merge)")
+     45     device.discard_config()
+     46     print("--- Diff ---")
+
+ipdb> iprint(device.compare_config())
+*** NameError: name 'iprint' is not defined
+ipdb> !print(device.compare_config())
+
+ipdb> n
+Hit enter to continue: 
+> /home/ponnathan/GIT/netmiko/class9/lessons/cl9_ls4_test_merge_nxos.py(43)<module>()
+     42 
+---> 43     print()
+     44     print(">>>Discard config change (merge)")
+
+ipdb> n
+
+> /home/ponnathan/GIT/netmiko/class9/lessons/cl9_ls4_test_merge_nxos.py(44)<module>()
+     43     print()
+---> 44     print(">>>Discard config change (merge)")
+     45     device.discard_config()
+
+ipdb> n
+>>>Discard config change (merge)
+> /home/ponnathan/GIT/netmiko/class9/lessons/cl9_ls4_test_merge_nxos.py(45)<module>()
+     44     print(">>>Discard config change (merge)")
+---> 45     device.discard_config()
+     46     print("--- Diff ---")
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class9/lessons/cl9_ls4_test_merge_nxos.py(46)<module>()
+     45     device.discard_config()
+---> 46     print("--- Diff ---")
+     47     print(device.compare_config())
+
+ipdb> n
+--- Diff ---
+> /home/ponnathan/GIT/netmiko/class9/lessons/cl9_ls4_test_merge_nxos.py(47)<module>()
+     46     print("--- Diff ---")
+---> 47     print(device.compare_config())
+     48     print("--- End Diff ---")
+
+ipdb> n
+
+> /home/ponnathan/GIT/netmiko/class9/lessons/cl9_ls4_test_merge_nxos.py(48)<module>()
+     47     print(device.compare_config())
+---> 48     print("--- End Diff ---")
+     49     hit_enter()
+
+ipdb> n
+--- End Diff ---
+> /home/ponnathan/GIT/netmiko/class9/lessons/cl9_ls4_test_merge_nxos.py(49)<module>()
+     48     print("--- End Diff ---")
+---> 49     hit_enter()
+     50 
+
+ipdb> n
+Hit enter to continue: 
+> /home/ponnathan/GIT/netmiko/class9/lessons/cl9_ls4_test_merge_nxos.py(51)<module>()
+     50 
+---> 51     print()
+     52     print(">>>Load config change (merge) - commit")
+
+ipdb> n
+
+> /home/ponnathan/GIT/netmiko/class9/lessons/cl9_ls4_test_merge_nxos.py(52)<module>()
+     51     print()
+---> 52     print(">>>Load config change (merge) - commit")
+     53     device.load_merge_candidate(filename="nxos-merge.conf")
+
+ipdb> n
+>>>Load config change (merge) - commit
+> /home/ponnathan/GIT/netmiko/class9/lessons/cl9_ls4_test_merge_nxos.py(53)<module>()
+     52     print(">>>Load config change (merge) - commit")
+---> 53     device.load_merge_candidate(filename="nxos-merge.conf")
+     54     # print(device.compare_config())
+
+ipdb> n
+> /home/ponnathan/GIT/netmiko/class9/lessons/cl9_ls4_test_merge_nxos.py(55)<module>()
+     54     # print(device.compare_config())
+---> 55     device.commit_config()
+     56     hit_enter()
+
+ipdb> !print(device.compare_config())
+
+ipdb> 
+n
+n
+> /home/ponnathan/GIT/netmiko/class9/lessons/cl9_ls4_test_merge_nxos.py(56)<module>()
+     55     device.commit_config()
+---> 56     hit_enter()
+     57 
+
+ipdb> n
+Hit enter to continue: 
+--Return--
+None
+> /home/ponnathan/GIT/netmiko/class9/lessons/cl9_ls4_test_merge_nxos.py(56)<module>()
+     55     device.commit_config()
+---> 56     hit_enter()
+     57 
+
+ipdb> n
+--Call--
+> /usr/local/lib/python3.11/threading.py(1541)_shutdown()
+   1540 
+-> 1541 def _shutdown():
+   1542     """
+
+ipdb> c
+

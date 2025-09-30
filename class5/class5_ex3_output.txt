@@ -1,0 +1,16 @@
+(py3_venv) [ponnathan@pylab36b class5]$ python class5_ex3.py 
+
+vrf definition blue
+ rd 100:1
+ !
+ address-family ipv4
+  route-target export 100:1
+  route-target import 100:1
+ exit-address-family
+ !
+ address-family ipv6
+  route-target export 100:1
+  route-target import 100:1
+ exit-address-family
+
+
