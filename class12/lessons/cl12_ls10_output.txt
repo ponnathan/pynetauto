@@ -1,0 +1,17 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ py.test -s -v test_netmiko2.py 
+Password: 
+=========================================================================== test session starts ============================================================================
+platform linux -- Python 3.11.6, pytest-8.3.5, pluggy-1.5.0 -- /home/ponnathan/VENV/py3_venv/bin/python3.11
+cachedir: .pytest_cache
+rootdir: /home/ponnathan/GIT/pynetauto/class12/lessons
+plugins: pylama-8.4.1, cov-4.1.0
+collecting ... Password: 
+collected 2 items                                                                                                                                                          
+
+test_netmiko2.py::test_find_prompt PASSED
+test_netmiko2.py::test_send_command PASSED
+
+============================================================================ 2 passed in 8.18s =============================================================================
+(py3_venv) [ponnathan@pylab36b lessons]$ netstat -an | grep 184.105
+tcp        0      0 172.30.0.153:45228      184.105.247.89:22       TIME_WAIT  
+

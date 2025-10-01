@@ -1,0 +1,58 @@
+(py3_venv) [ponnathan@pylab36b class12]$ python fixme_orig.py 
+Password: 
+
+
+
+Print facts for all devices in connections list
+--------------------
+
+------
+<napalm.ios.ios.IOSDriver object at 0x7efcfd605410>
+'ios facts:'
+{'fqdn': 'cisco3.not set',
+ 'hostname': 'cisco3',
+ 'interface_list': ['GigabitEthernet0/0/0',
+                    'GigabitEthernet0/0/1',
+                    'GigabitEthernet0/1/0',
+                    'GigabitEthernet0/1/1',
+                    'GigabitEthernet0/1/2',
+                    'GigabitEthernet0/1/3',
+                    'Loopback100',
+                    'Loopback101',
+                    'Loopback102',
+                    'Loopback103',
+                    'Vlan1'],
+ 'model': 'C1111-4P',
+ 'os_version': 'ISR Software (ARMV8EL_LINUX_IOSD-UNIVERSALK9_IAS-M), Version '
+               '16.12.3, RELEASE SOFTWARE (fc5)',
+ 'serial_number': 'FGL222290LB',
+ 'uptime': 49388940.0,
+ 'vendor': 'Cisco'}
+------
+
+------
+<napalm.eos.eos.EOSDriver object at 0x7efcf5d89d10>
+'eos facts:'
+{'fqdn': 'arista1',
+ 'hostname': 'arista1',
+ 'interface_list': ['Ethernet1',
+                    'Ethernet2',
+                    'Ethernet3',
+                    'Ethernet4',
+                    'Ethernet5',
+                    'Ethernet6',
+                    'Ethernet7',
+                    'Loopback100',
+                    'Loopback101',
+                    'Management1',
+                    'Vlan1'],
+ 'model': 'vEOS-lab',
+ 'os_version': '4.28.0F-26924507.4280F',
+ 'serial_number': '',
+ 'uptime': 50160431.22561669,
+ 'vendor': 'Arista'}
+------
+
+
+
+

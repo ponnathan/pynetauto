@@ -1,0 +1,19 @@
+(py3_venv) [ponnathan@pylab36b class12]$ diff fixme_orig.py fixme_black.py 
+9c9
+<     device=device.copy()
+---
+>     device = device.copy()
+11c11
+<     platform = device.pop('platform')
+---
+>     platform = device.pop("platform")
+15c15
+<     return(conn)
+---
+>     return conn
+24c24
+<     print ("\n\n")
+---
+>     print("\n\n")
+(py3_venv) [ponnathan@pylab36b class12]$ pycodestyle fixme_black.py 
+

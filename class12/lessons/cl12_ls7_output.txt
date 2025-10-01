@@ -1,0 +1,41 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ py.test -s -v
+Password: 
+=========================================================================== test session starts ============================================================================
+platform linux -- Python 3.11.6, pytest-8.3.5, pluggy-1.5.0 -- /home/ponnathan/VENV/py3_venv/bin/python3.11
+cachedir: .pytest_cache
+rootdir: /home/ponnathan/GIT/pynetauto/class12/lessons
+plugins: pylama-8.4.1, cov-4.1.0
+collecting ... Password: 
+collecting 4 items                                                                                                                                                         Password: 
+collected 14 items                                                                                                                                                         
+
+test_netmiko.py::test_find_prompt Password: 
+PASSED
+test_netmiko.py::test_send_command Password: 
+PASSED
+test_netmiko2.py::test_find_prompt PASSED
+test_netmiko2.py::test_send_command PASSED
+test_netmiko3.py::test_find_prompt PASSED
+test_netmiko3.py::test_send_command PASSED
+test_netmiko4.py::test_find_prompt PASSED
+test_netmiko4.py::test_send_command PASSED
+test_sample.py::test_answer PASSED
+test_sample.py::test_answer2 PASSED
+test_sample.py::test_answer3 PASSED
+test_sample2.py::test_answer PASSED
+test_sample2.py::test_answer2 PASSED
+test_sample2.py::test_answer3 FAILED
+
+================================================================================= FAILURES =================================================================================
+_______________________________________________________________________________ test_answer3 _______________________________________________________________________________
+
+    def test_answer3():
+>       assert increment(1) == 7
+E       assert 2 == 7
+E        +  where 2 = increment(1)
+
+test_sample2.py:14: AssertionError
+========================================================================= short test summary info ==========================================================================
+FAILED test_sample2.py::test_answer3 - assert 2 == 7
+====================================================================== 1 failed, 13 passed in 59.09s =======================================================================
+
