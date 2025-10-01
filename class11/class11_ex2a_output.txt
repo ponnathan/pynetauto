@@ -1,0 +1,35 @@
+(py3_venv) [ponnathan@pylab36b class11]$ python class11_ex2a.py 
+
+Response Code: 200
+
+Response Text:
+'{"circuits":"https://netbox.lasthop.io/api/circuits/","core":"https://netbox.lasthop.io/api/core/","dcim":"https://netbox.lasthop.io/api/dcim/","extras":"https://netbox.lasthop.io/api/extras/","ipam":"https://netbox.lasthop.io/api/ipam/","plugins":"https://netbox.lasthop.io/api/plugins/","status":"https://netbox.lasthop.io/api/status/","tenancy":"https://netbox.lasthop.io/api/tenancy/","users":"https://netbox.lasthop.io/api/users/","virtualization":"https://netbox.lasthop.io/api/virtualization/","wireless":"https://netbox.lasthop.io/api/wireless/"}'
+
+Response JSON:
+{'circuits': 'https://netbox.lasthop.io/api/circuits/',
+ 'core': 'https://netbox.lasthop.io/api/core/',
+ 'dcim': 'https://netbox.lasthop.io/api/dcim/',
+ 'extras': 'https://netbox.lasthop.io/api/extras/',
+ 'ipam': 'https://netbox.lasthop.io/api/ipam/',
+ 'plugins': 'https://netbox.lasthop.io/api/plugins/',
+ 'status': 'https://netbox.lasthop.io/api/status/',
+ 'tenancy': 'https://netbox.lasthop.io/api/tenancy/',
+ 'users': 'https://netbox.lasthop.io/api/users/',
+ 'virtualization': 'https://netbox.lasthop.io/api/virtualization/',
+ 'wireless': 'https://netbox.lasthop.io/api/wireless/'}
+
+Response Headers:
+{'Allow': 'GET, HEAD, OPTIONS',
+ 'Connection': 'keep-alive',
+ 'Content-Length': '554',
+ 'Content-Type': 'application/json',
+ 'Cross-Origin-Opener-Policy': 'same-origin',
+ 'Date': 'Wed, 01 Oct 2025 01:47:06 GMT',
+ 'Referrer-Policy': 'same-origin',
+ 'Server': 'nginx/1.28.0',
+ 'Vary': 'HX-Request, Cookie, origin',
+ 'X-Content-Type-Options': 'nosniff',
+ 'X-Frame-Options': 'SAMEORIGIN',
+ 'X-Request-ID': '17468619-080f-4845-8a49-549e6ade6513'}
+
+

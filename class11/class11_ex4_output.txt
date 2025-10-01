@@ -1,0 +1,55 @@
+(py3_venv) [ponnathan@pylab36b class11]$ python class11_ex4.py 
+
+Creating IP address object:
+Response code: 201
+Returned JSON:
+------------
+{'address': '192.0.2.231/32',
+ 'assigned_object': None,
+ 'assigned_object_id': None,
+ 'assigned_object_type': None,
+ 'comments': '',
+ 'created': '2025-10-01T01:51:23.645097Z',
+ 'custom_fields': {},
+ 'description': '',
+ 'display': '192.0.2.231/32',
+ 'dns_name': '',
+ 'family': {'label': 'IPv4', 'value': 4},
+ 'id': 34,
+ 'last_updated': '2025-10-01T01:51:23.645111Z',
+ 'nat_inside': None,
+ 'nat_outside': [],
+ 'role': None,
+ 'status': {'label': 'Active', 'value': 'active'},
+ 'tags': [],
+ 'tenant': None,
+ 'url': 'https://netbox.lasthop.io/api/ipam/ip-addresses/34/',
+ 'vrf': None}
+
+Query newly created object...
+------------
+{'address': '192.0.2.231/32',
+ 'assigned_object': None,
+ 'assigned_object_id': None,
+ 'assigned_object_type': None,
+ 'comments': '',
+ 'created': '2025-10-01T01:51:23.645097Z',
+ 'custom_fields': {},
+ 'description': '',
+ 'display': '192.0.2.231/32',
+ 'dns_name': '',
+ 'family': {'label': 'IPv4', 'value': 4},
+ 'id': 34,
+ 'last_updated': '2025-10-01T01:51:23.645111Z',
+ 'nat_inside': None,
+ 'nat_outside': [],
+ 'role': None,
+ 'status': {'label': 'Active', 'value': 'active'},
+ 'tags': [],
+ 'tenant': None,
+ 'url': 'https://netbox.lasthop.io/api/ipam/ip-addresses/34/',
+ 'vrf': None}
+
+IP Addreses ID: 34
+
+

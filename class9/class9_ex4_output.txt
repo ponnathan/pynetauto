@@ -1,10 +1,29 @@
-Config staged: pending differences nxos1
->>>>>>>> 
-<diffs here>
+(py3_venv) [ponnathan@pylab36b class9]$ python class9_ex4.py 
+Password: 
+
+
+
+Config staged: pending differences nxos1.lasthop.io
+>>>>>>>>
+no vlan 603
+no vlan 602
+no vlan 601
+no ssh login-attempts 10
+no ssh login-gracetime 5
+interface loopback99
+  description Test Loopback
+  no shutdown
+logging monitor
 >>>>>>>>
 
-Discarding candidate config for device nxos1
-Diff after discarding candidate config for device nxos1
+
+
+Discarding candidate config for device nxos1.lasthop.io
+Diff after discarding candidate config for device nxos1.lasthop.io
 >>>>>>>>
-(no differences)
+
 >>>>>>>>
+
+
+
+

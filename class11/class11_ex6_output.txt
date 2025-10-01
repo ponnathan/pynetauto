@@ -1,0 +1,7 @@
+(py3_venv) [ponnathan@pylab36b class11]$ python class11_ex6.py 
+Enter Address ID that was created in exercise4: 34
+
+Deleting IP address object.
+Response code: 204
+
+

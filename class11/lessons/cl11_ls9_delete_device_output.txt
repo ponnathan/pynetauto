@@ -1,0 +1,2 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl11_ls9_delete_device.py 
+Device deleted successfully

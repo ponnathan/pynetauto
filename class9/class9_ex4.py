@@ -8,7 +8,7 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
-NXOS_REPLACE_CANDIDATE = "nxos2_replacement_cfg"
+NXOS_REPLACE_CANDIDATE = "nxos1_replacement_cfg"
 
 
 if __name__ == "__main__":

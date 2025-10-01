@@ -1,0 +1,115 @@
+(py3_venv) [ponnathan@pylab36b lessons]$ cat cl11_ls7_add_device.py 
+import os
+import requests
+import json
+from pprint import pprint
+
+from urllib3.exceptions import InsecureRequestWarning
+
+requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
+
+
+if __name__ == "__main__":
+
+    token = os.environ["NETBOX_TOKEN"]
+    url = "https://netbox.lasthop.io/api/dcim/devices/"
+    http_headers = {
+        "Content-Type": "application/json",
+        "authorization": "Token {}".format(token),
+    }
+    post_data = {
+        "name": "arista8",
+        "device_role": 4,  # Distribution Switch
+        "device_type": 2,  # vEOS
+        "display": "arista8",
+        "role": 4,  # Distribution Switch
+        "rack": 1,  # RK1
+        "site": 2,  # Fremont Data Center
+        "status": "active",  # Active
+    }
+
+    response = requests.post(
+        url, headers=http_headers, data=json.dumps(post_data), verify=False
+    )
+    response = response.json()
+    print()
+    pprint(response)
+    # print(response._content.decode())
+    print()
+(py3_venv) [ponnathan@pylab36b lessons]$ python cl11_ls7_add_device.py 
+
+{'airflow': None,
+ 'asset_tag': None,
+ 'cluster': None,
+ 'comments': '',
+ 'config_context': {},
+ 'config_template': None,
+ 'console_port_count': 0,
+ 'console_server_port_count': 0,
+ 'created': '2025-10-01T01:25:18.571165Z',
+ 'custom_fields': {},
+ 'description': '',
+ 'device_bay_count': 0,
+ 'device_role': {'display': 'Distribution Switch',
+                 'id': 4,
+                 'name': 'Distribution Switch',
+                 'slug': 'distribution-switch',
+                 'url': 'https://netbox.lasthop.io/api/dcim/device-roles/4/'},
+ 'device_type': {'display': 'vEOS',
+                 'id': 2,
+                 'manufacturer': {'display': 'Arista',
+                                  'id': 2,
+                                  'name': 'Arista',
+                                  'slug': 'arista',
+                                  'url': 'https://netbox.lasthop.io/api/dcim/manufacturers/2/'},
+                 'model': 'vEOS',
+                 'slug': 'arista-veos',
+                 'url': 'https://netbox.lasthop.io/api/dcim/device-types/2/'},
+ 'display': 'arista8',
+ 'face': None,
+ 'front_port_count': 0,
+ 'id': 31,
+ 'interface_count': 0,
+ 'inventory_item_count': 0,
+ 'last_updated': '2025-10-01T01:25:18.571182Z',
+ 'latitude': None,
+ 'local_context_data': None,
+ 'location': None,
+ 'longitude': None,
+ 'module_bay_count': 0,
+ 'name': 'arista8',
+ 'oob_ip': None,
+ 'parent_device': None,
+ 'platform': None,
+ 'position': None,
+ 'power_outlet_count': 0,
+ 'power_port_count': 0,
+ 'primary_ip': None,
+ 'primary_ip4': None,
+ 'primary_ip6': None,
+ 'rack': {'display': 'RK1',
+          'id': 1,
+          'name': 'RK1',
+          'url': 'https://netbox.lasthop.io/api/dcim/racks/1/'},
+ 'rear_port_count': 0,
+ 'role': {'display': 'Distribution Switch',
+          'id': 4,
+          'name': 'Distribution Switch',
+          'slug': 'distribution-switch',
+          'url': 'https://netbox.lasthop.io/api/dcim/device-roles/4/'},
+ 'serial': '',
+ 'site': {'display': 'Fremont Data Center',
+          'id': 2,
+          'name': 'Fremont Data Center',
+          'slug': 'fremont-dc',
+          'url': 'https://netbox.lasthop.io/api/dcim/sites/2/'},
+ 'status': {'label': 'Active', 'value': 'active'},
+ 'tags': [],
+ 'tenant': None,
+ 'url': 'https://netbox.lasthop.io/api/dcim/devices/31/',
+ 'vc_position': None,
+ 'vc_priority': None,
+ 'virtual_chassis': None}
+
+(py3_venv) [ponnathan@pylab36b lessons]$ 
+
