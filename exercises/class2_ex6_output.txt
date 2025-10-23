@@ -1,0 +1,12 @@
+(py3_venv) [ponnathan@pylab36b excer]$ python class2_ex6.py 
+Enter the password: 
+Current prompt: cisco4#
+Config mode prompt: cisco4(config)#
+After exit config mode: cisco4#
+Output after disable:
+ disable
+cisco4>
+After enable: cisco4#
+
+Session log saved in 'my_output.txt'
+

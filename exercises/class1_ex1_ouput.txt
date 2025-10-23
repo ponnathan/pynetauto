@@ -1,0 +1,4 @@
+(py3_venv) [ponnathan@pylab36b excer]$ python class1_ex1.py 
+nxos1#
+device prompt verified
+Connection closed

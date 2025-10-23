@@ -1,0 +1,39 @@
+(py3_venv) [ponnathan@pylab36b excer]$ python class2_ex4.py 
+##############################
+
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+cisco3(config)#ip name-server 1.1.1.1
+cisco3(config)#ip name-server 1.0.0.1
+cisco3(config)#ip domain-lookup
+cisco3(config)#end
+cisco3#
+
+##############################
+--------------------------------------------------
+
+====  With Fast_cli = False ===
+
+--------------------------------------------------
+
+ping_successful:
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 64.233.177.100, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 56/56/60 ms
+
+Excecution Time (Fast_cli=False): 0:00:02.144989
+--------------------------------------------------
+
+====  With Fast_cli = True ===
+--------------------------------------------------
+
+ping_successful:
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 64.233.177.100, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 60/60/60 ms
+
+Excecution Time (Fast_cli=True): 0:00:01.263320
+--------------------------------------------------
+

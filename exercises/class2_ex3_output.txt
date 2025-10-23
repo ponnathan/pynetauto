@@ -1,0 +1,35 @@
+(py3_venv) [ponnathan@pylab36b excer]$ python class2_ex3.py 
+
+=== SHOW VERSION ===
+[{'config_register': '0x2102',
+  'hardware': ['C1111-4P'],
+  'hostname': 'cisco4',
+  'mac_address': [],
+  'release': 'fc5',
+  'reload_reason': 'Reload Command',
+  'restarted': '13:43:11 PDT Thu May 30 2024',
+  'rommon': 'IOS-XE',
+  'running_image': 'c1100-universalk9_ias.16.12.03.SPA.bin',
+  'serial': ['FGL223392W1'],
+  'software_image': 'ARMV8EL_LINUX_IOSD-UNIVERSALK9_IAS-M',
+  'uptime': '1 year, 20 weeks, 5 days, 6 hours, 39 minutes',
+  'uptime_days': '5',
+  'uptime_hours': '6',
+  'uptime_minutes': '39',
+  'uptime_weeks': '20',
+  'uptime_years': '1',
+  'version': '16.12.3'}]
+
+=== SHOW LLDP NEIGHBORS ===
+[{'capabilities': 'B',
+  'local_interface': 'Gi0/0/0',
+  'neighbor_interface': '17',
+  'neighbor_name': 'twb-sf-hpsw1'}]
+
+##############################
+
+Data type for 'lldp neighbors': <class 'list'>
+
+HPE switch port : 17
+
+

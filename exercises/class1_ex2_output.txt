@@ -1,0 +1,7 @@
+(py3_venv) [ponnathan@pylab36b excer]$ python class1_ex2.py 
+Device prompt: nxos1#
+ device prompt verified for nxos1
+Connection closed
+Device prompt: nxos2#
+ device prompt verified for nxos2
+Connection closed
